@@ -4,9 +4,9 @@
       = form_for [@post] do |f|
         .input-box
           = f.text_area :text, class: 'input-text',rows: "5", wrap: "hard", placeholder: "今日の積み上げ"
-          = f.text_area :text, class: 'input-text',rows: "5", wrap: "hard", placeholder: "振り返り"
-          = f.text_area :text, class: 'input-text',rows: "5", wrap: "hard", placeholder: "ビジネスに活かせそうなこと"
-          = f.text_area :text, class: 'input-text',rows: "5", wrap: "hard", placeholder: "反省、明日に活かすこと"
+          = f.text_area :Feedback, class: 'input-text',rows: "5", wrap: "hard", placeholder: "振り返り"
+          = f.text_area :business, class: 'input-text',rows: "5", wrap: "hard", placeholder: "ビジネスに活かせそうなこと"
+          = f.text_area :tomorrow, class: 'input-text',rows: "5", wrap: "hard", placeholder: "反省、明日に活かすこと"
         = f.submit "報告する", class: 'submit-btn'
       
     
