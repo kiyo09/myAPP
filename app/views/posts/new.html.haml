@@ -1,0 +1,20 @@
+.wrapper
+  .report
+    .form
+    = form_for [@post] do |f|
+      .input-box
+        = f.text_field :text, class: 'input-text'
+      = f.submit "報告する", class: 'submit-btn'
+      
+    
+
+  .right-box
+    .right-box__day
+      .right-box__day1
+        大きなこと
+      .right-box__day3
+        中くらいなこと
+      .right-box__day5
+        小さいこと
+
+    .right-box__graf
