@@ -5,16 +5,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
+  font-family: 'PixelMplus12';
 }
 .body{
- 
+  
   width: 100%;
   height: 100%;
 }
 
 .wrapper{
-  background-color: rgba(255,255,255,0.4);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -28,23 +27,25 @@
         text-align: center;
         &__name{
           width: 100px;
-          height: 60px;
+          height: 70px;
           display: inline-block;
-          padding: 5px;
+          padding: 15px 5px;
           margin: 10px;
           text-decoration: none;
-          background: rgba(255,255,255,0);/*ボタン色*/
-          color:rgba(255,255,255,1);/*ボタン色と同じに*/
+          background: rgba(255,255,255,0);
+          color:rgba(0,0,0,1);
           box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
           border-bottom: solid 3px #627295;
-          border-radius: 3px;/*角の丸み*/
+          border-radius: 3px;
           font-weight: bold;
           text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38);
-          :active{
+          &:hover{
             -webkit-transform: translateY(4px);
             transform: translateY(4px);
             box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
             border-bottom: none;
+            background: rgba(255,255,255,0.8);
+            color:rgba(255,255,255,0);
           }
         }
       }
@@ -58,40 +59,54 @@
     width: 90vw;
     margin: 1vh;
     padding: 1vh;
-    color:rgba(255,255,255,1);
+    color:rgba(0,0,0,1);
     .year{
       display: flex;
       font-size: 5vh;
+      margin:10px;
+      background-color: rgba(255,255,255,0.7);
       &-today{
         margin: 10px 30px 10px 10px;
       }
       &-title{
-
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
       }
     }
     .month{
       display: flex;
       font-size: 5vh;
+      background-color: rgba(255,255,255,0.7);
+      margin:10px;
       &-today{
         margin: 10px 30px 10px 10px;
       }
       &-title{
-
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
       }
     } 
     .week{
       display: flex;
       font-size: 5vh;
+      background-color: rgba(255,255,255,0.7);
+      margin:10px;
       &-today{
         margin: 10px 30px 10px 10px;
       }
       &-title{
-
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
       }
     }
     .day{
       font-size: 5vh;
       display: flex;
+      background-color: rgba(255,255,255,0.7);
+      margin:10px;
       &-today{
         margin: 10px 30px 10px 10px;
         display: flex;
