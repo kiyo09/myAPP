@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ @import 'modules/posts.new';
+
+
 body{
   background-image: url(http://gahag.net/img/201509/25s/gahag-0007706759-1.png);
   background-size: cover;

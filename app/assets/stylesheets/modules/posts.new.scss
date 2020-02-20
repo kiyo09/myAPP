@@ -1,0 +1,51 @@
+.wrapper{
+  .report{
+    width: 50%;
+    margin: 50px;
+    .form{
+      
+      .input-box{
+        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        
+        .input-text{
+          display: inline-block;
+          font-size: 30px;
+        }
+      }
+      .submit-btn{
+        width: 100%;
+        height: 50px;
+      }
+      }
+    }
+
+    
+  .todo{
+    width: 50%;
+    .right-box{
+      margin: 50px 50px 50px 0px;
+      .right-box__day{
+        display: flex;
+        flex-direction: column;
+        .input-text1{
+          font-size: 50px;
+        }
+        .input-text3{
+          font-size: 40px;
+        }
+        .input-text5{
+          font-size: 30px;
+        }
+      }
+    .submit-btn{
+      width: 100%;
+    }
+      }
+}
+}
+
+
+
+
