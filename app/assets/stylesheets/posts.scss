@@ -32,20 +32,20 @@
           padding: 15px 5px;
           margin: 10px;
           text-decoration: none;
-          background: rgba(255,255,255,0);
-          color:rgba(0,0,0,1);
-          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-          border-bottom: solid 3px #627295;
+          color: #FFF;
+          border: 2px solid #000;
           border-radius: 5px;
+          box-shadow: 0 0 0 4px #FFF inset;
+          background-color: rgba(0,0,0,0.9);
           font-weight: bold;
-          text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38);
           &:hover{
             -webkit-transform: translateY(4px);
             transform: translateY(4px);
             box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
             border-bottom: none;
-            background: rgba(255,255,255,0.8);
-            color:rgba(255,255,255,0);
+            background: rgba(0, 0, 0, 0);
+            color:rgba(0,0,0,1);
+            font-weight: bold;
           }
         }
       }
@@ -65,8 +65,19 @@
       display: flex;
       font-size: 5vh;
       margin:10px;
-      background-color: rgba(255,255,255,0.7);
+      color: #FFF;
+      border: 2px solid #000;
       border-radius: 5px;
+      box-shadow: 0 0 0 4px #FFF inset;
+      background-color: rgba(0,0,0,0.9);
+      &:hover{
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+        border-bottom: none;
+        background: rgba(0,0,0,0);
+        color:rgba(0,0,0,1);
+      }
       &-today{
         margin: 10px 30px 10px 10px;
       }
@@ -79,9 +90,21 @@
     .month{
       display: flex;
       font-size: 5vh;
-      background-color: rgba(255,255,255,0.7);
       margin:10px;
+      color: #FFF;
+      border: 2px solid #000;
       border-radius: 5px;
+      box-shadow: 0 0 0 4px #FFF inset;
+      background-color: rgba(0,0,0,0.9);
+      font-weight: bold;
+      &:hover{
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+        border-bottom: none;
+        background: rgba(0,0,0,0);
+        color:rgba(0,0,0,1);
+      }
       &-today{
         margin: 10px 30px 10px 10px;
       }
@@ -94,9 +117,21 @@
     .week{
       display: flex;
       font-size: 5vh;
-      background-color: rgba(255,255,255,0.7);
       margin:10px;
+      color: #FFF;
+      border: 2px solid #000;
       border-radius: 5px;
+      box-shadow: 0 0 0 4px #FFF inset;
+      background-color: rgba(0,0,0,0.9);
+      font-weight: bold;
+      &:hover{
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+        border-bottom: none;
+        background: rgba(0,0,0,0);
+        color:rgba(0,0,0,1);
+      }
       &-today{
         margin: 10px 30px 10px 10px;
       }
@@ -109,9 +144,21 @@
     .day{
       font-size: 5vh;
       display: flex;
-      background-color: rgba(255,255,255,0.7);
       margin:10px;
+      color: #FFF;
+      border: 2px solid #000;
       border-radius: 5px;
+      box-shadow: 0 0 0 4px #FFF inset;
+      background-color: rgba(0,0,0,0.9);
+      font-weight: bold;
+      &:hover{
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+        border-bottom: none;
+        background: rgba(0,0,0,0);
+        color:rgba(0,0,0,1);
+      }
       &-today{
         margin: 10px 30px 10px 10px;
         display: flex;

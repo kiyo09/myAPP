@@ -34,7 +34,8 @@
       .day-today
         3月1日
         .report
-          report
+          - @posts.each do |post|
+            = post.text
         .graf
           graf
         .todo
