@@ -9,6 +9,15 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
   .header
+    .header-title
     .header-lightbox
-    
+      .header-lightbox__login
+        = link_to "ログイン", user_session_path, class: 'login'
+      .header-lightbox__logout
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'logout'
+          
+
+
+
+
   = yield
