@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   root to: 'users#index'
   resources :posts, only: [:index, :new, :create, :show]
   resources :weeks, only: [:index, :new, :create, :show, :edit, :update]
+  resources :months, only: [:index, :new, :create, :show, :edit, :update]
 end

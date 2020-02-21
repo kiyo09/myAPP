@@ -1,0 +1,18 @@
+.wrapper  
+  = render "layouts/sidebar"
+
+  .contents
+    .content
+      .month
+        .month_num
+          = "#{@month.month}月の目標"
+          .month_text
+            = @month.text
+          .month_target
+            = @month.target
+          .month_goal
+            = @month.goal
+          .month_checkbox
+            = check_box :month, :checkbox, {class: 'check_box'}, true, false
+        .month_Feedback
+          = @month.Feedback
