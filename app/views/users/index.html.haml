@@ -1,0 +1,28 @@
+.wrapper
+  = render "layouts/sidebar"
+  
+  .contents
+    .year
+      .year-today
+        年間目標　2020年
+        .year-title
+          フリーになる
+    .month
+      .month-today
+        月間目標　3月
+        .month-title
+          タイピング秒速５
+    .week
+      .week-today
+        週間目標　10w
+        .week-title
+          毎日英語勉強
+    .day
+      .day-today
+        3月1日
+        -# .report
+        -#   - @posts.each do |post|
+        -#     = post.text
+        .todo
+          = link_to new_post_path do
+            TODO

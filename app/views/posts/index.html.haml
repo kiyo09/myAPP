@@ -1,43 +1,16 @@
-.wrapper
-  .sidebar
-    .sidebar-menu
-      .sidebar-box
-        .sidebar-box__name 
-          year
-      .sidebar-box
-        .sidebar-box__name
-          month
-      .sidebar-box
-        .sidebar-box__name
-          week
-      .sidebar-box
-        .sidebar-box__name
-          day
-  
+.wrapper  
+  = render "layouts/sidebar"
+
   .contents
-    .year
-      .year-today
-        年間目標　2020年
-        .year-title
-          フリーになる
-    .month
-      .month-today
-        月間目標　3月
-        .month-title
-          タイピング秒速５
-    .week
-      .week-today
-        週間目標　10w
-        .week-title
-          毎日英語勉強
-    .day
-      .day-today
-        3月1日
-        .report
-          - @posts.each do |post|
-            = post.text
-        .graf
-          graf
-        .todo
-          = link_to new_post_path do
-            TODO
+    .reports
+      .report
+        - @posts.each do |post|
+          .repo
+            = link_to "日付", post_path(post), class: 'repo'
+            %br
+            = link_to "#{post.created_at}", post_path(post), class: 'repo'
+            %br
+            = link_to "TITLE", post_path(post), class: 'repo'
+            = link_to "#{post.text}", post_path(post), class: 'repo'
+            %br 
+       

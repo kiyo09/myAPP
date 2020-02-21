@@ -1,0 +1,85 @@
+@import 'DR.scss';
+
+.sidebar{
+  width: 13vw;
+  font-size: 3vh;
+  margin: 1vh;
+  padding: 1vh;
+  &-menu{
+    .sidebar-box{
+      text-align: center;
+      &__name{
+        @include DQcolor-sidebar
+      }
+    }
+}
+}
+
+.contents{
+  width: 90vw;
+  margin: 1vh;
+  padding: 1vh;
+  color:rgba(0,0,0,1);
+  
+  .year{
+    @include DQcolor
+    }
+    &-today{
+      margin: 10px 30px 10px 10px;
+    }
+    &-title{
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+    }
+  
+  .month{
+    @include DQcolor
+    }
+    &-today{
+      margin: 10px 30px 10px 10px;
+    }
+    &-title{
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+    }
+  .week{
+    @include DQcolor
+  }
+    &-today{
+      margin: 10px 30px 10px 10px;
+    }
+    &-title{
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+  .day{
+    @include DQcolor
+  }
+    &-today{
+      margin: 10px 30px 10px 10px;
+      display: flex;
+    }
+      .report{
+        width: 50%;
+        margin-right: 3vw;
+      }
+      .graf{
+        width: 50%;
+        margin-left: 5vw;
+      }
+}
+  
+
+
+.btn-square {
+
+}
+
+.btn-square:active {
+/*ボタンを押したとき*/
+
+}

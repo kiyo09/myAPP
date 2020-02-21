@@ -1,0 +1,26 @@
+.wrapper  
+  = render "layouts/sidebar" 
+  
+  .day
+    .day-today
+      日付
+      %br
+      = @post.created_at
+    .reports
+      .report
+        .report_text
+          今日の積み上げ
+          %br 
+          = @post.text
+        .report_Feedback
+          振り返り 
+          %br
+          = @post.Feedback
+        .report_business
+          ビジネスに活かせそうなこと
+          %br
+          = @post.business
+        .report_tomorrow
+          反省、明日に活かすこと
+          %br
+          = @post.tomorrow
