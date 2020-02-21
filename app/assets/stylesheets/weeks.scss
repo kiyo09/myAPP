@@ -1,3 +1,30 @@
 // Place all the styles related to the weeks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.contents{
+  .content{
+    .week{
+        flex-direction: column;
+        .week-box{
+          .week-box_num{
+            display: flex;
+            width: 100%;
+            .week-box_text{
+
+            }
+            .week-box_checkbox{
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .check_box{
+    width:			24px;
+	height:			24px;
+	-moz-transform:		scale(1.4);
+	-webkit-transform:	scale(1.4);
+	transform:		scale(1.4);
+  }

@@ -1,0 +1,16 @@
+.wrapper  
+  = render "layouts/sidebar"
+
+  .contents
+    .content
+      = link_to "目標を立てる", new_week_path, class: 'week'
+      .week
+        - @weeks.each do |week|
+          .week-box
+            .week-box_num
+              = link_to "#{week.week}w", edit_week_path(week), class: 'weeks'
+              .week-box_text
+                = week.text
+              .week-box_check_box
+                = check_box :week, :checkbox, {class: 'check_box'}, true, false
+          
