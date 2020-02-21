@@ -5,5 +5,10 @@
     .content
       .week
         .week_num
+          = "#{@week.week}w"
         .week_text
+          = @week.text
+        .week_Feedback
+          = @week.Feedback
         .week_checkbox
+          = check_box :week, :checkbox, {class: 'check_box'}, true, false

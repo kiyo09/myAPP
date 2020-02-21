@@ -24,7 +24,7 @@ class WeeksController < ApplicationController
   def update
     week = Week.find(params[:id])
     week.update(week_params)
-    redirect_to weeks_path, notice: "今週も頑張ろう！！"
+    redirect_to week_path(week), notice: "今週も頑張ろう！！"
   end
   
   private
