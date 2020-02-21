@@ -1,5 +1,15 @@
-.wrapper
+.wrapper  
+  = render "layouts/sidebar" 
+
   .report
+    .todo
+      .right-box
+        = form_for [@post] do |f|
+          .right-box__day
+            = f.text_area :text, class: 'input-text1',rows: "1", wrap: "hard", placeholder: "今日もっともやるべき１つ"
+            = f.text_area :text, class: 'input-text3',rows: "3", wrap: "hard", placeholder: "今日やるべき大きなこと３つ"
+            = f.text_area :text, class: 'input-text5',rows: "5", wrap: "hard", placeholder: "今日やるべきこと５つ"
+          = f.submit "報告する", class: 'submit-btn ,'
     .form
       = form_for [@post] do |f|
         .input-box
@@ -8,15 +18,3 @@
           = f.text_area :business, class: 'input-text',rows: "5", wrap: "hard", placeholder: "ビジネスに活かせそうなこと"
           = f.text_area :tomorrow, class: 'input-text',rows: "5", wrap: "hard", placeholder: "反省、明日に活かすこと"
         = f.submit "報告する", class: 'submit-btn'
-      
-    
-
-  .todo
-    .right-box
-      = form_for [@post] do |f|
-        .right-box__day
-          = f.text_area :text, class: 'input-text1',rows: "1", wrap: "hard", placeholder: "今日もっともやるべき１つ"
-          = f.text_area :text, class: 'input-text3',rows: "3", wrap: "hard", placeholder: "今日やるべき大きなこと３つ"
-          = f.text_area :text, class: 'input-text5',rows: "5", wrap: "hard", placeholder: "今日やるべきこと５つ"
-        = f.submit "報告する", class: 'submit-btn ,'
-

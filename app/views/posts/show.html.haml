@@ -1,0 +1,19 @@
+.day
+  .day-today
+    = post.created_at
+  .reports
+    .report
+      .report_text
+        = post.text
+      .report_Feedback
+        = post.Feedback
+      .report_business
+        = post.business
+      .report_tomorrow
+        = post.tomorrow
+
+    .graf
+      graf
+    .todo
+      = link_to new_post_path do
+        TODO

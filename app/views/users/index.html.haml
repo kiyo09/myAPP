@@ -1,6 +1,6 @@
-.wrapper  
+.wrapper
   = render "layouts/sidebar"
-
+  
   .contents
     .year
       .year-today
@@ -20,11 +20,9 @@
     .day
       .day-today
         3月1日
-        .report
-          - @posts.each do |post|
-            = post.text
-        .graf
-          graf
+        -# .report
+        -#   - @posts.each do |post|
+        -#     = post.text
         .todo
           = link_to new_post_path do
             TODO
