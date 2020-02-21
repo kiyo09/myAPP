@@ -1,0 +1,17 @@
+.wrapper  
+  = render "layouts/sidebar"
+
+  .contents
+    .content
+      .month
+        = @month.month
+      .form
+        = form_for [@month] do |f|
+          .input-box
+            = f.text_field :month, class: 'input-text', placeholder: "何月？"
+            = f.text_area :text, class: 'input-text',rows: "3", wrap: "hard", placeholder: "今月の目標"
+            = f.text_field :target, class: 'input-text', placeholder: "何週間でやる？"
+            = f.text_area :goal, class: 'input-text',rows: "3", wrap: "hard", placeholder: " 目標 / 結果 "
+            = f.text_area :Feedback, class: 'input-text',rows: "3", wrap: "hard", placeholder: "振り返り"
+            = f.check_box :month, class: 'input-text', placeholder: "一週間の目標"        
+          = f.submit "報告する", class: 'submit-btn'

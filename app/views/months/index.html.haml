@@ -1,0 +1,16 @@
+.wrapper  
+  = render "layouts/sidebar"
+
+  .contents
+    .content
+      = link_to "目標を立てる", new_month_path, class: 'month'
+      .month
+        - @months.each do |month|
+          .month-box
+            .month-box_num
+              = link_to "#{month.month}w", edit_month_path(month), class: 'months'
+              .month-box_text
+                = month.text
+              .month-box_check_box
+                = check_box :month, :checkbox, {class: 'check_box'}, true, false
+          
