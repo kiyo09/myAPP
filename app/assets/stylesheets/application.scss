@@ -13,10 +13,13 @@
  *= require_tree .
  *= require_self
  */
+ @import 'modules/DR.scss';
  @import 'modules/sidebar';
  @import 'modules/header';
  @import "modules/user";
  @import 'modules/posts.new';
+
+
 
 
 body{
