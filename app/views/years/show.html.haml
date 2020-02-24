@@ -1,0 +1,28 @@
+.wrapper  
+  = render "layouts/sidebar"
+
+  .contents
+    .content
+      .year
+        .year_num
+          = link_to "#{@year.year}年の目標", edit_year_path(@year), class: 'years'
+        %br
+        .year_title
+          目標
+          %br
+          = @year.title
+        %br
+        .year_kgi
+          KGI
+          %br
+          = @year.kgi
+        %br
+        .year_kpi
+          KPI
+          %br
+          = @year.kpi
+        %br
+        .year_kdi
+          KDI
+          %br
+          = @year.kdi

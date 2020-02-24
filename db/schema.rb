@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_21_114138) do
+ActiveRecord::Schema.define(version: 2020_02_24_031017) do
 
   create_table "months", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "month"
@@ -50,6 +50,16 @@ ActiveRecord::Schema.define(version: 2020_02_21_114138) do
     t.text "text"
     t.text "Feedback"
     t.boolean "checkbox"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "years", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "year"
+    t.string "title"
+    t.text "kgi"
+    t.text "kpi"
+    t.text "kdi"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
