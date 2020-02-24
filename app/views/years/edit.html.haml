@@ -1,0 +1,16 @@
+.wrapper  
+  = render "layouts/sidebar"
+
+  .contents
+    .content
+      .year
+        = @year.year
+      .form
+        = form_for [@year] do |f|
+          .input-box
+            = f.text_field :year, class: 'input-text', placeholder: "何週間目？"
+            = f.text_area :title, class: 'input-text',rows: "3", wrap: "hard", placeholder: "一年の目標"
+            = f.text_area :kgi, class: 'input-text',rows: "3", wrap: "hard", placeholder: "KGI"
+            = f.text_area :kpi, class: 'input-text',rows: "3", wrap: "hard", placeholder: "KPI"
+            = f.text_area :kdi, class: 'input-text',rows: "3", wrap: "hard", placeholder: "KDI"
+          = f.submit "報告する", class: 'submit-btn'

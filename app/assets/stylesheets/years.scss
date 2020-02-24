@@ -1,0 +1,24 @@
+// Place all the styles related to the years controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.contents{
+  .content{
+    .year{
+        flex-direction: column;
+        .year-box{
+          .year-box_num{
+            display: flex;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .year-box_text{
+
+            }
+            .year-box_checkbox{
+            }
+          }
+        }
+      }
+    }
+  }

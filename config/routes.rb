@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :new, :create, :show]
   resources :weeks, only: [:index, :new, :create, :show, :edit, :update]
   resources :months, only: [:index, :new, :create, :show, :edit, :update]
+  resources :years, only: [:index, :new, :create, :show, :edit, :update]
 end

@@ -1,0 +1,13 @@
+.wrapper  
+  = render "layouts/sidebar"
+
+  .contents
+    .content
+      = link_to "目標を立てる", new_year_path, class: 'year'
+      .year
+        - @years.each do |year|
+          .year-box
+            .year-box_num
+              = link_to "#{year.year}年", edit_year_path(year), class: 'years'
+              .year-box_title
+                = year.title
