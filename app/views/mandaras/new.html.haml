@@ -1,0 +1,115 @@
+.wrapper  
+  = render "layouts/sidebar"
+
+  .mand
+    = form_for [@mandara] do |f|
+      %table
+        %tbody
+          %tr
+            %td.table2-1
+            %td.table2-2
+            %td.table2-3
+            %td.table3-1
+            %td.table3-2
+            %td.table3-3
+            %td.table4-1
+            %td.table4-2
+            %td.table4-3
+          %tr
+            %td.table2-4
+            %td#submandara1.table1-1
+            %td.table2-6
+            %td.table3-4
+            %td#submandara1.table1-2
+            %td.table3-6
+            %td.table4-4
+            %td#submandara1.table1-3
+            %td.table4-6
+          %tr
+            %td.table2-7
+            %td.table2-8
+            %td.table2-9
+            %td.table3-7
+            %td.table3-8
+            %td.table3-9
+            %td.table4-7
+            %td.table4-8
+            %td.table4-9
+
+      %table
+        %tbody
+          %tr
+            %td.table5-1
+            %td.table5-2
+            %td.table5-3
+            %td#submandara1.table1-1
+              = f.text_area :subtext1, class: 'subinput-text',rows: "3", wrap: "hard"
+            %td#submandara1.table1-2
+              = f.text_area :subtext2, class: 'subinput-text',rows: "3", wrap: "hard"
+            %td#submandara1.table1-3
+              = f.text_area :subtext3, class: 'subinput-text',rows: "3", wrap: "hard"
+            %td.table6-1
+            %td.table6-2
+            %td.table6-3
+          %tr
+            %td.table5-4
+            %td
+            %td.table5-6
+            %td#submandara1.table1-4
+              = f.text_area :subtext4, class: 'subinput-text',rows: "3", wrap: "hard"
+            %td#mandara1.table1-1
+              = f.text_area :text, class: 'input-text',rows: "3", wrap: "hard"
+            %td#submandara1.table1-6
+              = f.text_area :subtext6, class: 'subinput-text',rows: "3", wrap: "hard"
+            %td.table6-4
+            %td#submandara1.table1-6
+            %td.table6-6
+          %tr
+            %td.table5-7
+            %td.table5-8
+            %td.table5-9
+            %td#submandara1.table1-7
+              = f.text_area :subtext7, class: 'subinput-text',rows: "3", wrap: "hard"
+            %td#submandara1.table1-8
+              = f.text_area :subtext8, class: 'subinput-text',rows: "3", wrap: "hard"
+            %td#submandara1.table1-9
+              = f.text_area :subtext9, class: 'subinput-text',rows: "3", wrap: "hard"
+            %td.table6-7
+            %td.table6-8
+            %td.table6-9
+
+      %table
+        %tbody
+          %tr
+            %td.table7-1
+            %td.table7-2
+            %td.table7-3
+            %td.table8-1
+            %td.table8-2
+            %td.table8-3
+            %td.table9-1
+            %td.table9-2
+            %td.table-3
+          %tr
+            %td.table7-4
+            %td#submandara1.table1-7
+            %td.table7-6
+            %td.table8-4
+            %td#submandara1.table1-8
+            %td.table8-6
+            %td.table9-4
+            %td#submandara1.table1-9
+            %td.table9-6
+          %tr
+            %td.table7-7
+            %td.table7-8
+            %td.table7-9
+            %td.table8-7
+            %td.table8-8
+            %td.table8-9
+            %td.table9-7
+            %td.table9-8
+            %td.table9-9
+      = f.submit "報告する", class: 'submit-btn'
+
+

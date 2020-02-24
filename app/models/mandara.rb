@@ -1,0 +1,2 @@
+class Mandara < ApplicationRecord
+end

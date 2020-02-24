@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_24_031017) do
+ActiveRecord::Schema.define(version: 2020_02_24_110552) do
+
+  create_table "mandaras", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "text"
+    t.boolean "checkbox"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "subtext"
+    t.text "subtext1"
+    t.text "subtext2"
+    t.text "subtext3"
+    t.text "subtext4"
+    t.text "subtext6"
+    t.text "subtext7"
+    t.text "subtext8"
+    t.text "subtext9"
+  end
 
   create_table "months", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "month"

@@ -4,6 +4,7 @@
   .contents
     .content
       = link_to "目標を立てる", new_year_path, class: 'year'
+      = link_to "マンダラシート", new_mandara_path, class: 'year'
       .year
         - @years.each do |year|
           .year-box
