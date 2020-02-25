@@ -5,11 +5,13 @@ class MandarasController < ApplicationController
   
   def new
     @mandara = Mandara.new
+    @subskill = Subskill.new
   end
   
   def create
     mandara = Mandara.create(mandara_params)
-    redirect_to edit_mandara_path(mandara), notice: "今週も頑張ろう！！"
+    @subskill = Subskill.create
+    redirect_to new_subskill_path(mandara), notice: "今週も頑張ろう！！"
   end
   
   def edit
@@ -24,6 +26,6 @@ class MandarasController < ApplicationController
   
   private
   def mandara_params
-    params.require(:mandara).permit(:text, :subtext1, :subtext2, :subtext3, :subtext4, :subtext6,  :subtext7,  :subtext8,  :subtext9, :checkbox)
+    params.require(:mandara).permit(:text, :subtext1, :subtext2, :subtext3, :subtext4, :subtext6,  :subtext7,  :subtext8,  :subtext9, :checkbox).merge(user_id: current_user.id)
   end
 end

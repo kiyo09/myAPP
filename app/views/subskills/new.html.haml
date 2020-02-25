@@ -2,14 +2,18 @@
   = render "layouts/sidebar"
 
   .mand
-    = form_for [@mandara] do |f|
+    = form_with model: @subskill do |f|
       %table
         %tbody
           %tr
             %td.table2-1
+              = f.text_area :subskill2_1, class: 'subinput-text',rows: "3", wrap: "hard"
             %td.table2-2
+              = f.text_area :subskill2_2, class: 'subinput-text',rows: "3", wrap: "hard"
             %td.table2-3
+              = f.text_area :subskill2_3, class: 'subinput-text',rows: "3", wrap: "hard"
             %td.table3-1
+              = f.text_area :subskill3_1, class: 'subinput-text',rows: "3", wrap: "hard"
             %td.table3-2
             %td.table3-3
             %td.table4-1
@@ -18,9 +22,11 @@
           %tr
             %td.table2-4
             %td#submandara1.table1-1
+              -# = mandara.subtext1
             %td.table2-6
             %td.table3-4
             %td#submandara1.table1-2
+              -# = @mandara.subtext2
             %td.table3-6
             %td.table4-4
             %td#submandara1.table1-3
@@ -43,11 +49,8 @@
             %td.table5-2
             %td.table5-3
             %td#submandara1.table1-1
-              = f.text_area :subtext1, class: 'subinput-text',rows: "3", wrap: "hard"
             %td#submandara1.table1-2
-              = f.text_area :subtext2, class: 'subinput-text',rows: "3", wrap: "hard"
             %td#submandara1.table1-3
-              = f.text_area :subtext3, class: 'subinput-text',rows: "3", wrap: "hard"
             %td.table6-1
             %td.table6-2
             %td.table6-3
@@ -56,11 +59,8 @@
             %td
             %td.table5-6
             %td#submandara1.table1-4
-              = f.text_area :subtext4, class: 'subinput-text',rows: "3", wrap: "hard"
             %td#mandara1.table1-1
-              = f.text_area :text, class: 'input-text',rows: "3", wrap: "hard"
             %td#submandara1.table1-6
-              = f.text_area :subtext6, class: 'subinput-text',rows: "3", wrap: "hard"
             %td.table6-4
             %td#submandara1.table1-6
             %td.table6-6
@@ -69,11 +69,8 @@
             %td.table5-8
             %td.table5-9
             %td#submandara1.table1-7
-              = f.text_area :subtext7, class: 'subinput-text',rows: "3", wrap: "hard"
             %td#submandara1.table1-8
-              = f.text_area :subtext8, class: 'subinput-text',rows: "3", wrap: "hard"
             %td#submandara1.table1-9
-              = f.text_area :subtext9, class: 'subinput-text',rows: "3", wrap: "hard"
             %td.table6-7
             %td.table6-8
             %td.table6-9
@@ -111,10 +108,3 @@
             %td.table9-8
             %td.table9-9
       = f.submit "報告する", class: 'submit-btn'
-
-    -# .form_box
-    -#   = form_for [@subskill] do |f|
-    -#     = f.check_box :checkbox, class: 'input-text' 
-    -#     = f.submit "報告する", class: 'submit-btn'
-
-
