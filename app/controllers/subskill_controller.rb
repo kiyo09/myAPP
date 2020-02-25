@@ -1,0 +1,2 @@
+class SubskillController < ApplicationController
+end
