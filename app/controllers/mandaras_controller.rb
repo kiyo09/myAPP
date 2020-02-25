@@ -1,4 +1,5 @@
 class MandarasController < ApplicationController
+
   def index
     @mandaras = Mandara.all
   end
@@ -9,17 +10,25 @@ class MandarasController < ApplicationController
   
   def create
     mandara = Mandara.create(mandara_params)
-    redirect_to edit_mandara_path(mandara), notice: "今週も頑張ろう！！"
+    redirect_to subskill_mandara_path(mandara), notice: "今週も頑張ろう！！"
   end
   
   def edit
     @mandara = Mandara.find(params[:id])
+    @subskill = Subskill.new
+  end
+
+  def subskill
+    @subskill = Subskill.new
+    subskill.creat(subskill_params)
   end
 
   def update
+    binding.pry
     mandara = Mandara.find(params[:id])
     mandara.update(mandara_params)
-    redirect_to mandara_path(mandara), notice: "今週も頑張ろう！！"
+    subskill.creat(subskill_params)
+    redirect_to edit_mandara_path(mandara), notice: "今週も頑張ろう！！"
   end
   
   private

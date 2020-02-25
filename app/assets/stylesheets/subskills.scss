@@ -1,0 +1,136 @@
+// Place all the styles related to the subskills controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the mandaras controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.mand{
+  width: 100vw;
+}
+
+table , td, th {
+  border-collapse: collapse;
+  font-size: 18px;
+  margin: 10px;
+  color: #FFF;
+  border: 2px solid #000;
+  border-radius: 5px;
+  box-shadow: 0 0 0 4px #FFF inset;
+  background-color: rgba(0,0,0,0.9);
+  width: 95%;
+  text-align: center;
+}
+tbody{
+  
+}
+td, th {
+	padding: 2px;
+	width: 50px;
+	height: 75px;
+}
+th {
+	background: #f0e6cc;
+}
+.even {
+	background: #fbf8f0;
+}
+.odd {
+	background: #fefcf9;
+}
+#mandara1{
+
+}
+#mandara_text{
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  text-align: center;
+}
+.subinput-text{
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  text-align: center;
+}
+
+#mandara1.table1-1{
+  background-color: gold;
+  color: black;
+}
+
+#submandara1.table1-1{
+  background-color: #FFDBF2;
+  color: black;
+}
+.table2{
+  background-color: #FFDBF2;
+  color: black;
+}
+
+#submandara1.table1-2{
+  background-color: azure;
+  color: black;
+}
+.table3{
+  background-color: azure;
+  color: black;
+}
+
+#submandara1.table1-3{
+  background-color: paleturquoise;
+  color: black;
+}
+.table4{
+  background-color: paleturquoise;
+  color: black;
+}
+
+#submandara1.table1-4{
+  background-color: #C3FCFF;
+  color: black;
+}
+.table5{
+  background-color: #C3FCFF;
+  color: black;
+}
+
+#submandara1.table1-6{
+  background-color: #FFB5A0;
+  color: black;
+}
+.table6{
+  background-color: #FFB5A0;
+  color: black;
+}
+
+#submandara1.table1-7{
+  background-color: #C3D9FF;
+  color: black;
+}
+.table7{
+  background-color: #C3D9FF;
+  color: black;
+}
+
+#submandara1.table1-8{
+  background-color: #A4EEB0;
+  color: black;
+}
+.table8{
+  background-color: #A4EEB0;
+  color: black;
+}
+
+#submandara1.table1-9{
+  background-color: #D4CBF7;
+  color: black;
+}
+.table9{
+  background-color: #D4CBF7;
+  color: black;
+}
+
+
