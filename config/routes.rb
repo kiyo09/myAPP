@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :weeks, only: [:index, :new, :create, :show, :edit, :update]
   resources :months, only: [:index, :new, :create, :show, :edit, :update]
   resources :years, only: [:index, :new, :create, :show, :edit, :update]
+  resources :mandaras, only: [:index, :new, :create, :edit, :update]
+  
 end
