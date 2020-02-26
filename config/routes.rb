@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :months, only: [:index, :new, :create, :show, :edit, :update]
   resources :years, only: [:index, :new, :create, :show, :edit, :update]
   resources :mandaras, only: [:index, :new, :create, :show, :edit, :update]
+  resources :memos, only: [:index, :new, :create, :show]
   
 end

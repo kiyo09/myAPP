@@ -1,0 +1,12 @@
+.wrapper  
+  = render "layouts/sidebar"
+
+  .contents
+    .content
+      .month
+        .month_title
+          = @memo.title
+          = @memo.created_at
+          .month_text#foo
+            = @memo.text
+        
