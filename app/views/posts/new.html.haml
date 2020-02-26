@@ -3,13 +3,13 @@
 
   .report
     .todo
-      .right-box
-        = form_for [@post] do |f|
-          .right-box__day
-            = f.text_area :text, class: 'input-text1',rows: "1", wrap: "hard", placeholder: "今日もっともやるべき１つ"
-            = f.text_area :text, class: 'input-text3',rows: "3", wrap: "hard", placeholder: "今日やるべき大きなこと３つ"
-            = f.text_area :text, class: 'input-text5',rows: "5", wrap: "hard", placeholder: "今日やるべきこと５つ"
-          = f.submit "報告する", class: 'submit-btn ,'
+      -# .right-box
+      -#   = form_for [@post] do |f|
+      -#     .right-box__day
+      -#       = f.text_area :text, class: 'input-text1',rows: "1", wrap: "hard", placeholder: "今日もっともやるべき１つ"
+      -#       = f.text_area :text, class: 'input-text3',rows: "3", wrap: "hard", placeholder: "今日やるべき大きなこと３つ"
+      -#       = f.text_area :text, class: 'input-text5',rows: "5", wrap: "hard", placeholder: "今日やるべきこと５つ"
+      -#     = f.submit "報告する", class: 'submit-btn ,'
     .form
       = form_for [@post] do |f|
         .input-box

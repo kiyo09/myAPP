@@ -10,7 +10,7 @@ end
 
 def create
   post = Post.create(post_params)
-  redirect_to root_path, notice: "今日も頑張ろう！！"
+  redirect_to posts_path, notice: "今日も頑張ろう！！"
 end
 
 def show
