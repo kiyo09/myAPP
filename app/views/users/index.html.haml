@@ -4,26 +4,35 @@
   .contents
     .year
       .year-today
-        年間目標　2020年
+        = current_user.showyear_last_year
+        年目標
         .year-title
-          フリーになる
+          = current_user.show_last_year
     .month
       .month-today
-        月間目標　3月
+        = current_user.showmonth_last_month
+        月目標
         .month-title
-          タイピング秒速５
+          = current_user.show_last_month
     .week
       .week-today
-        週間目標　10w
+        = current_user.showweek_last_week
+        週目標
         .week-title
-          毎日英語勉強
+          = current_user.show_last_week
     .day
-      .day-today
-        3月1日
-        -# .report
-        -#   - @posts.each do |post|
-        -#     = post.text
+      .post-today
+        = current_user.showpost_last_post
+        振り返り
+        .post-title
+          = current_user.show_last_post
+        
+ 
         .todo
           = link_to new_post_path do
             TODO
+        .memo
+          MEMO
+          = current_user.show_last_memo
+
   
