@@ -6,7 +6,7 @@
       .month
         .month_title
           = @memo.title
-          = @memo.created_at
+          = @memo.updated_at.strftime("%m月%d日")
           .month_text#foo
             = @memo.text
         

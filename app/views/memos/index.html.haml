@@ -11,4 +11,4 @@
               = link_to "#{memo.title}", memo_path(memo), class: 'memos'
               .memo-box_text
                 = link_to "#{memo.text}", memo_path(memo), class: 'memos'
-                = memo.created_at
+                = memo.updated_at.strftime("%m月%d日")

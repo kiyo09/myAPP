@@ -8,7 +8,7 @@
           .repo
             = link_to "日付", post_path(post), class: 'repo'
             %br
-            = link_to "#{post.created_at}", post_path(post), class: 'repo'
+            = link_to "#{post.updated_at.strftime("%m月%d日")}", post_path(post), class: 'repo'
             %br
             = link_to "TITLE", post_path(post), class: 'repo'
             = link_to "#{post.text}", post_path(post), class: 'repo'
