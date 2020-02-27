@@ -16,7 +16,7 @@
       .report
         - @posts.each do |post|
           .repo
-            = link_to "日付", root_path, class: 'repo'
+            = link_to "日付", post_path(@post), class: 'repo'
             %br
             = link_to "#{post.updated_at.strftime("%m月%d日")}", todos_path, class: 'repo'
             %br

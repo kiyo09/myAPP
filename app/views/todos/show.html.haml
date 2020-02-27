@@ -27,13 +27,13 @@
               = f.check_box :checkbox5, class: 'input-text'        
             = f.submit "報告する", class: 'submit-btn'
 
-  - if @post.text.presence
+  - if @post.week.presence
     .day
       .day-today
         日付
         %br
         = "#{@post.week}週間目"
-        = @post.updated_at.strftime("%m月%d日")
+        -# = @post.updated_at.strftime("%m月%d日")
       .reports
         .report
           .report_text
@@ -54,7 +54,7 @@
             = @post.tomorrow
   - else
     .form
-      = form_for [@todo,@post] do |f|
+      = form_for [@post] do |f|
         .input-box
           = f.text_field :week, class: 'input-text', placeholder: "何週間目？"
           = f.text_area :text, class: 'input-text',rows: "5", wrap: "hard", placeholder: "今日の積み上げ"

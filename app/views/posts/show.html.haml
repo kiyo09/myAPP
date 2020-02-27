@@ -23,9 +23,9 @@
               = f.check_box :checkbox5, class: 'input-text'        
             = f.submit "報告する", class: 'submit-btn'
 
-  - if @todo.post.text == nil
+  - if @post.text == nil
     .form
-      = form_for [@todo,@post] do |f|
+      = form_for [@post] do |f|
         .input-box
           = f.text_area :text, class: 'input-text',rows: "5", wrap: "hard", placeholder: "今日の積み上げ"
           = f.text_area :Feedback, class: 'input-text',rows: "5", wrap: "hard", placeholder: "振り返り"

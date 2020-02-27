@@ -11,15 +11,15 @@ def new
 end
 
 def create
-  @post = Post.create(post_params)
-  id = @post.todo_id
-  redirect_to todo_path(id), notice: "今日も頑張ろう！！"
+  post = Post.create(post_params)
+  redirect_to todos_path, notice: "今日も頑張ろう！！"
 end
 
 def show
   @post = Post.find(params[:id])
   @todo = Todo.find(params[:id])
   @user = current_user
+  
 end
 
 private

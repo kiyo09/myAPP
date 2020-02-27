@@ -9,7 +9,7 @@ class WeeksController < ApplicationController
   
   def create
     week = Week.create(week_params)
-    redirect_to week_path(week), notice: "今週も頑張ろう！！"
+    redirect_to weeks_path, notice: "今週も頑張ろう！！"
   end
   
   def show
