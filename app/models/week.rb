@@ -1,4 +1,5 @@
 class Week < ApplicationRecord
   belongs_to :user
-  # belongs_to :month
+  # has_many :posts
+  belongs_to :month
 end

@@ -26,3 +26,16 @@
           KDI
           %br
           = @year.kdi
+
+      .report
+        - @months.each do |month|
+          .repo
+            = link_to "月", month_path(@month), class: 'repo'
+            %br
+            = link_to "#{month.month}", month_path(@month), class: 'repo'
+            %br
+            = link_to "TITLE", month_path(@month), class: 'repo'
+            = link_to "#{month.text}", month_path(@month), class: 'repo'
+            %br
+            = link_to "FEEDBACK", month_path(@month), class: 'repo'
+            = link_to "#{month.Feedback}", month_path(@month), class: 'repo'

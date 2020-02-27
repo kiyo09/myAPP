@@ -1,6 +1,6 @@
 class YearsController < ApplicationController
   def index
-    @years = Year.all
+    @years = Year.includes(:user).order("created_at DESC")
   end
   
   def new
@@ -14,7 +14,8 @@ class YearsController < ApplicationController
   
   def show
     @year = Year.find(params[:id])
-  
+    @months = Month.where("year = ? ", "#{@year.year}")
+    @month = Month.find(params[:id])
   end
 
   def edit

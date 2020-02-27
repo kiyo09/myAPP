@@ -8,7 +8,7 @@
         - @months.each do |month|
           .month-box
             .month-box_num
-              = link_to "#{month.month}w", edit_month_path(month), class: 'months'
+              = link_to "#{month.month}月", edit_month_path(month), class: 'months'
               .month-box_text
                 = month.text
               .month-box_check_box

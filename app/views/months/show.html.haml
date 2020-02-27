@@ -16,3 +16,16 @@
             = check_box :month, :checkbox, {class: 'check_box'}, true, false
         .month_Feedback
           = @month.Feedback
+
+      .report
+        - @weeks.each do |week|
+          .repo
+            = link_to "週", week_path(@week), class: 'repo'
+            %br
+            = link_to "#{week.week}", week_path(@week), class: 'repo'
+            %br
+            = link_to "TITLE", week_path(@week), class: 'repo'
+            = link_to "#{week.text}", week_path(@week), class: 'repo'
+            %br
+            = link_to "FEEDBACK", week_path(@week), class: 'repo'
+            = link_to "#{week.Feedback}", week_path(@week), class: 'repo'

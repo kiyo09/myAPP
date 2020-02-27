@@ -14,7 +14,8 @@ class MonthsController < ApplicationController
   
   def show
     @month = Month.find(params[:id])
-  
+    @weeks = Week.where("month = ? ", "#{@month.month}")
+    @week = Week.find(params[:id])
   end
 
   def edit
@@ -29,7 +30,7 @@ class MonthsController < ApplicationController
   
   private
   def month_params
-    params.require(:month).permit(:text, :Feedback, :month, :target, :checkbox).merge(user_id: current_user.id)
+    params.require(:month).permit(:text, :Feedback, :month, :target, :goal, :checkbox, :year).merge(user_id: current_user.id)
   end
 
 end

@@ -1,6 +1,6 @@
 class MandarasController < ApplicationController
   def index
-    @mandaras = Mandara.all
+    @mandaras = Mandara.includes(:user)
   end
   
   def new

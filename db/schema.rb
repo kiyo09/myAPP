@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_27_023718) do
+ActiveRecord::Schema.define(version: 2020_02_27_120949) do
 
   create_table "mandaras", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "subtext1"
@@ -110,6 +110,7 @@ ActiveRecord::Schema.define(version: 2020_02_27_023718) do
     t.datetime "updated_at", null: false
     t.text "goal"
     t.integer "user_id"
+    t.integer "year"
   end
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -121,6 +122,7 @@ ActiveRecord::Schema.define(version: 2020_02_27_023718) do
     t.text "tomorrow"
     t.integer "user_id"
     t.integer "todo_id"
+    t.integer "week"
   end
 
   create_table "todos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -156,6 +158,7 @@ ActiveRecord::Schema.define(version: 2020_02_27_023718) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.integer "month"
   end
 
   create_table "years", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

@@ -18,6 +18,8 @@
   .header
     .header-title
     .header-lightbox
+      .header-lightbox__top
+        = link_to "トップページ", root_path, class: 'top'
       .header-lightbox__new
         = link_to "投稿する", new_todo_path, class: 'new'
       .header-lightbox__login

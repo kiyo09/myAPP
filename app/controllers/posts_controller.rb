@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
 
 def index
-  @posts = Post.includes(:user)
-  @todo = Todo.includes(:user)
+  @posts = Post.includes(:user).order("created_at DESC")
+  @todo = Todo.includes(:user).order("created_at DESC")
 end
 
 def new
@@ -24,7 +24,7 @@ end
 
 private
 def post_params
-  params.require(:post).permit(:text,:Feedback,:business,:tomorrow).merge(user_id: current_user.id, todo_id: params[:todo_id])
+  params.require(:post).permit(:text,:Feedback,:business,:tomorrow,:week).merge(user_id: current_user.id, todo_id: params[:todo_id])
 end
 
 end
