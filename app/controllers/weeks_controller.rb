@@ -1,6 +1,6 @@
 class WeeksController < ApplicationController
   def index
-    @weeks = Week.includes(:user).order("created_at DESC")
+    @weeks = current_user.weeks.order("created_at DESC")
   end
   
   def new
