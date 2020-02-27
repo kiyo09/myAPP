@@ -9,7 +9,7 @@ class WeeksController < ApplicationController
   
   def create
     week = Week.create(week_params)
-    redirect_to week_path(week), notice: "今週も頑張ろう！！"
+    redirect_to weeks_path, notice: "今週も頑張ろう！！"
   end
   
   def show
@@ -30,6 +30,6 @@ class WeeksController < ApplicationController
   
   private
   def week_params
-    params.require(:week).permit(:text,:Feedback,:week,:checkbox).merge(user_id: current_user.id)
+    params.require(:week).permit(:text,:Feedback,:week,:checkbox,:month).merge(user_id: current_user.id)
   end
 end

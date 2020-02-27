@@ -16,10 +16,10 @@
       .report
         - @posts.each do |post|
           .repo
-            = link_to "日付", root_path, class: 'repo'
+            = link_to "日付", todo_path(post), class: 'repo'
             %br
-            = link_to "#{post.updated_at.strftime("%m月%d日")}", todos_path, class: 'repo'
+            = link_to "#{post.updated_at.strftime("%m月%d日")}", todo_path(post), class: 'repo'
             %br
-            = link_to "TITLE", todos_path, class: 'repo'
-            = link_to "#{post.text}", todos_path, class: 'repo'
+            = link_to "TITLE", todo_path(post), class: 'repo'
+            = link_to "#{post.text}", todo_path(post), class: 'repo'
             %br
