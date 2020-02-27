@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_26_114438) do
+ActiveRecord::Schema.define(version: 2020_02_27_023718) do
 
   create_table "mandaras", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "subtext1"
@@ -120,6 +120,7 @@ ActiveRecord::Schema.define(version: 2020_02_26_114438) do
     t.text "business"
     t.text "tomorrow"
     t.integer "user_id"
+    t.integer "todo_id"
   end
 
   create_table "todos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

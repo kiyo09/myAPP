@@ -1,27 +1,129 @@
 .wrapper  
   = render "layouts/sidebar" 
+
+  .report
+    .todo
+      .right-box
+        = form_with model: @todo, local: true do |f|
+          .input-box
+            .right-box__day
+              今日もっともやるべき１つ
+              %br 
+              = @todo.todo1
+              = f.check_box :checkbox1, class: 'input-text'
+            .report_Feedback
+              今日やるべき大きなこと３つ
+              %br
+              = @todo.todo3
+              = f.check_box :checkbox3, class: 'input-text'
+            .report_business
+              今日やるべきこと５つ
+              %br
+              = @todo.todo5
+              = f.check_box :checkbox5, class: 'input-text'        
+            = f.submit "報告する", class: 'submit-btn'
+
+  - if @todo.post.text == nil
+    .form
+      = form_for [@todo,@post] do |f|
+        .input-box
+          = f.text_area :text, class: 'input-text',rows: "5", wrap: "hard", placeholder: "今日の積み上げ"
+          = f.text_area :Feedback, class: 'input-text',rows: "5", wrap: "hard", placeholder: "振り返り"
+          = f.text_area :business, class: 'input-text',rows: "5", wrap: "hard", placeholder: "ビジネスに活かせそうなこと"
+          = f.text_area :tomorrow, class: 'input-text',rows: "5", wrap: "hard", placeholder: "反省、明日に活かすこと"
+        = f.submit "報告する", class: 'submit-btn'
+  - else
+    .day
+      .day-today
+        日付
+        %br
+        -# = @post.updated_at.strftime("%m月%d日")
+      .reports
+        .report
+          .report_text
+            今日の積み上げ
+            %br 
+            = @post.text
+          .report_Feedback
+            振り返り 
+            %br
+            = @post.Feedback
+          .report_business
+            ビジネスに活かせそうなこと
+            %br
+            = @post.business
+          .report_tomorrow
+            反省、明日に活かすこと
+            %br
+            = @post.tomorrow
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-# .wrapper  
+-#   = render "layouts/sidebar" 
   
-  .day
-    .day-today
-      日付
-      %br
-      = @post.updated_at.strftime("%m月%d日")
-    .reports
-      .report
-        .report_text
-          今日の積み上げ
-          %br 
-          = @post.text
-        .report_Feedback
-          振り返り 
-          %br
-          = @post.Feedback
-        .report_business
-          ビジネスに活かせそうなこと
-          %br
-          = @post.business
-        .report_tomorrow
-          反省、明日に活かすこと
-          %br
-          = @post.tomorrow
-    = render "todos/show"
+-# .report
+-#   .todo
+-#     .right-box
+-#       .right-box__day
+-#         今日もっともやるべき１つ
+-#         %br 
+-#         = @todo.todo1
+-#       .report_Feedback
+-#         今日やるべき大きなこと３つ
+-#         %br
+-#         = @todo.todo3
+-#       .report_business
+-#         今日やるべきこと５つ
+-#         %br
+-#         = @todo.todo5
+
+-#   .day
+-#     .day-today
+-#       日付
+-#       %br
+-#       = @post.updated_at.strftime("%m月%d日")
+-#     .reports
+-#       .report
+-#         .report_text
+-#           今日の積み上げ
+-#           %br 
+-#           = @post.text
+-#         .report_Feedback
+-#           振り返り 
+-#           %br
+-#           = @post.Feedback
+-#         .report_business
+-#           ビジネスに活かせそうなこと
+-#           %br
+-#           = @post.business
+-#         .report_tomorrow
+-#           反省、明日に活かすこと
+-#           %br
+-#           = @post.tomorrow
+-#     = render "todos/show"
