@@ -20,7 +20,7 @@ end
 
 private
 def post_params
-  params.require(:post).permit(:text,:Feedback,:business,:tomorrow)
+  params.require(:post).permit(:text,:Feedback,:business,:tomorrow).merge(user_id: current_user.id)
 end
 
 end

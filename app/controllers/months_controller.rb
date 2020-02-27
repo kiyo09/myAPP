@@ -29,7 +29,7 @@ class MonthsController < ApplicationController
   
   private
   def month_params
-    params.require(:month).permit(:text, :Feedback, :month, :target, :checkbox)
+    params.require(:month).permit(:text, :Feedback, :month, :target, :checkbox).merge(user_id: current_user.id)
   end
 
 end

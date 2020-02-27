@@ -102,6 +102,6 @@ class MandarasController < ApplicationController
      :subskill9_8,
      :subskill9_9,
     :checkbox
-)
+).merge(user_id: current_user.id)
   end
 end

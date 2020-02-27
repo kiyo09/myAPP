@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_26_081049) do
+ActiveRecord::Schema.define(version: 2020_02_26_114438) do
 
   create_table "mandaras", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "subtext1"
@@ -120,6 +120,18 @@ ActiveRecord::Schema.define(version: 2020_02_26_081049) do
     t.text "business"
     t.text "tomorrow"
     t.integer "user_id"
+  end
+
+  create_table "todos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
+    t.text "todo1"
+    t.boolean "checkbox1"
+    t.text "todo3"
+    t.boolean "checkbox3"
+    t.text "todo5"
+    t.boolean "checkbox5"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

@@ -10,6 +10,7 @@ class User < ApplicationRecord
     has_many :posts
     has_many :weeks
     has_many :years
+    has_many :todos
 
     validates :name, presence: true
     

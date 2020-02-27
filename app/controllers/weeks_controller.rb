@@ -29,6 +29,6 @@ class WeeksController < ApplicationController
   
   private
   def week_params
-    params.require(:week).permit(:text,:Feedback,:week,:checkbox)
+    params.require(:week).permit(:text,:Feedback,:week,:checkbox).merge(user_id: current_user.id)
   end
 end

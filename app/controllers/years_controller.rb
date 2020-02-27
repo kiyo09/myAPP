@@ -30,6 +30,6 @@ class YearsController < ApplicationController
   
   private
   def year_params
-    params.require(:year).permit(:year,:title,:kgi,:kpi,:kdi)
+    params.require(:year).permit(:year,:title,:kgi,:kpi,:kdi).merge(user_id: current_user.id)
   end
 end

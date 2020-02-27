@@ -6,11 +6,11 @@
       .report
         - @posts.each do |post|
           .repo
-            = link_to "日付", post_path(post), class: 'repo'
+            = link_to "日付", user_path(current_user), class: 'repo'
             %br
             = link_to "#{post.updated_at.strftime("%m月%d日")}", post_path(post), class: 'repo'
             %br
-            = link_to "TITLE", post_path(post), class: 'repo'
-            = link_to "#{post.text}", post_path(post), class: 'repo'
+            = link_to "TITLE", user_path(current_user), class: 'repo'
+            = link_to "#{post.text}", user_path(current_user), class: 'repo'
             %br 
        
