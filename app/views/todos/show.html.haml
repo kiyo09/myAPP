@@ -1,8 +1,8 @@
 .wrapper  
   = render "layouts/sidebar" 
 
-  .report
-    .todo
+  .report-p
+    .todos
       .right-box
         = form_with model: @todo, local: true do |f|
           .input-box
@@ -25,30 +25,30 @@
               %br
               = @todo.todo5
               = f.check_box :checkbox5, class: 'input-text'        
-            = f.submit "報告する", class: 'submit-btn'
+            = f.submit "報告する", class: 'submit-btn-todo'
 
   - if @post.text.presence
-    .day
-      .day-today
+    .day-p
+      .day-p-today
         日付
         %br
         = "#{@post.week}週間目"
         = @post.updated_at.strftime("%m月%d日")
-      .reports
-        .report
-          .report_text
+      .reports-p
+        .report-p
+          .report-p_text
             今日の積み上げ
             %br 
             = @post.text
-          .report_Feedback
+          .report-p_Feedback
             振り返り 
             %br
             = @post.Feedback
-          .report_business
+          .report-p_business
             ビジネスに活かせそうなこと
             %br
             = @post.business
-          .report_tomorrow
+          .report-p_tomorrow
             反省、明日に活かすこと
             %br
             = @post.tomorrow

@@ -20,17 +20,22 @@
     &-logout{
       display: inline-block;
     }
+    
   }
 }
 
 .new{
   @include DQcolor-header()
 }
-
+.top{
+  @include DQcolor-header()
+}
+.man{
+  @include DQcolor-header()
+}
 .login{
   @include DQcolor-header()
   }
-
 .logout{
   @include DQcolor-header()
 }

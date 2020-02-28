@@ -6,7 +6,7 @@
       .form
         = form_for [@memo] do |f|
           .input-box
-            -# = f.text_area :title, class: 'input-text',rows: "3", wrap: "hard", placeholder: "title"
+            = f.text_area :title, class: 'input-text',rows: "3", wrap: "hard", placeholder: "title"
             = f.text_area :text, id: "foo", class: 'input-text',rows: "50", wrap: "hard", placeholder: "text"
             %button.btn{"data-clipboard-target"=> "#foo"}クリップボード
           = f.submit "報告する", class: 'submit-btn'

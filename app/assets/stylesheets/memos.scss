@@ -1,3 +1,21 @@
-// Place all the styles related to the memos controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'modules/_DR.scss';
+.contents-m{
+  .content-m{
+
+  }
+  .memos{
+    &-box{
+      &_num{
+
+      }
+      &_text{
+        
+      }
+    }
+  }
+}
+
+.memo-a{
+  height: 5vh;
+  margin: 10px;
+}

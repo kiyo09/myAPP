@@ -1,17 +1,13 @@
 .wrapper  
   = render "layouts/sidebar"
 
-  .contents
-    .reports
-      .report
+  .contents-t
+    .reports-t
+      .report-t
         - @todos.each do |todo|
           .repo
-            = link_to "日付", todo_path(todo.id), class: 'repo'
-            %br
-            = link_to "#{todo.updated_at.strftime("%m月%d日")}", edit_todo_path(todo.id), class: 'repo'
-            %br
-            = link_to "今日もっともやるべき１つ", edit_todo_path(todo.id), class: 'repo'
-            = link_to "#{todo.todo1}", edit_todo_path(todo.id), class: 'repo'
-            %br 
-       
+            .rep
+              = link_to "#{todo.updated_at.strftime("%m月%d日")}", todo_path(todo.id), class: 'repo-d'
+              = link_to "今日もっともやるべき１つ", todo_path(todo.id), class: 'repo-d2'
+              = link_to "#{todo.todo1}", todo_path(todo.id), class: 'repo-d'
 

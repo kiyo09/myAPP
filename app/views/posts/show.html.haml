@@ -1,7 +1,7 @@
 .wrapper  
   = render "layouts/sidebar" 
 
-  .report
+  .report-p
     .todo
       .right-box
         = form_with model: @todo, local: true do |f|
@@ -19,7 +19,7 @@
             .report_business
               今日やるべきこと５つ
               %br
-              = @todo.todo5
+              = simple_format("#{@todo.todo5}")
               = f.check_box :checkbox5, class: 'input-text'        
             = f.submit "報告する", class: 'submit-btn'
 

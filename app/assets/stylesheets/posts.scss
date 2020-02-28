@@ -1,9 +1,9 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'modules/_DR.scss';
 
 .body{
-  
   width: 100%;
   height: 100%;
 }
@@ -14,103 +14,64 @@
   display: flex;
 }
 
-.day{
-  .day-today{
-    display: flex;
-    font-size: 5vh;
-    margin:10px;
-    color: #FFF;
-    border: 2px solid #000;
-    border-radius: 5px;
-    box-shadow: 0 0 0 4px #FFF inset;
-    background-color: rgba(0,0,0,0.9);
-    &:hover{
-      -webkit-transform: translateY(4px);
-      transform: translateY(4px);
-      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-      border-bottom: none;
-      background: rgba(0,0,0,0);
-      color:rgba(0,0,0,1);
+.report-p{
+  width: 50%;
+  margin-top: 30px;
+  .todos{
+    width: 100%;
+    .right-box{
+      .input-box{
+        width: 100%;
+        .day-today{
+          @include DQcolor;
+        }
+        .right-box__day{
+          @include DQcolor;
+        }
+        .report_Feedback{
+          @include DQcolor;
+        }
+        .report_business{
+          @include DQcolor;
+        }
+      }
     }
   }
-  .reports{
-    .report{
-      display: flex;
-      flex-direction: column;
-      &_text{
-        display: flex;
-    font-size: 5vh;
-    margin:10px;
-    color: #FFF;
-    border: 2px solid #000;
-    border-radius: 5px;
-    box-shadow: 0 0 0 4px #FFF inset;
-    background-color: rgba(0,0,0,0.9);
-    &:hover{
-      -webkit-transform: translateY(4px);
-      transform: translateY(4px);
-      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-      border-bottom: none;
-      background: rgba(0,0,0,0);
-      color:rgba(0,0,0,1);
-    }
-      }
-      &_Feedback{
-        display: flex;
-    font-size: 5vh;
-    margin:10px;
-    color: #FFF;
-    border: 2px solid #000;
-    border-radius: 5px;
-    box-shadow: 0 0 0 4px #FFF inset;
-    background-color: rgba(0,0,0,0.9);
-    &:hover{
-      -webkit-transform: translateY(4px);
-      transform: translateY(4px);
-      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-      border-bottom: none;
-      background: rgba(0,0,0,0);
-      color:rgba(0,0,0,1);
-    }
 
-      }
-      &_business{
-        display: flex;
-    font-size: 5vh;
-    margin:10px;
-    color: #FFF;
-    border: 2px solid #000;
-    border-radius: 5px;
-    box-shadow: 0 0 0 4px #FFF inset;
-    background-color: rgba(0,0,0,0.9);
-    &:hover{
-      -webkit-transform: translateY(4px);
-      transform: translateY(4px);
-      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-      border-bottom: none;
-      background: rgba(0,0,0,0);
-      color:rgba(0,0,0,1);
-    }
-      }
-      &_tomorrow{
-        display: flex;
-    font-size: 5vh;
-    margin:10px;
-    color: #FFF;
-    border: 2px solid #000;
-    border-radius: 5px;
-    box-shadow: 0 0 0 4px #FFF inset;
-    background-color: rgba(0,0,0,0.9);
-    &:hover{
-      -webkit-transform: translateY(4px);
-      transform: translateY(4px);
-      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-      border-bottom: none;
-      background: rgba(0,0,0,0);
-      color:rgba(0,0,0,1);
-    }
+}
+.submit-btn{
+  width: 100%;
+  font-size: 100px;
+}
 
-      }
+
+
+
+
+
+.day-p{
+  width: 100%;
+  .day-p-today{
+    @include DQcolor;
+    }
+  }
+.reports-p{
+  width: 50%;
+  .report-p{
+    display: flex;
+    flex-direction: column;
+    &_text{
+      @include DQcolor;
+    }
+    &_Feedback{
+      @include DQcolor;
+  }
+
+    &_business{
+      @include DQcolor;
+    }
+    &_tomorrow{
+      @include DQcolor;
     }
   }
 }
