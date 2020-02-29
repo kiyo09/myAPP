@@ -7,7 +7,19 @@
   display: flex;
   justify-content: space-between;
   &-title{
-
+    display: flex;
+    flex-direction: column;
+    @include DQcolor-header();
+    padding: 5px;
+    width: 100px;
+    margin-left: 25px;
+    .level-name{
+      margin: 5px;
+      
+    }
+    .level{
+      margin: 10px;
+    }
   }
   &-lightbox{
     float: right;

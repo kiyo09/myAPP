@@ -17,6 +17,15 @@
   %body
   .header
     .header-title
+      - unless request.path.include?("todos/")
+        - unless request.path.include?("weeks/")
+          .level-name
+            = current_user.name
+          .level
+            - if @posts.ids.present?
+              = "#{@posts.ids.last}レベル"
+            - else
+              = "1レベル"
     .header-lightbox
       .header-lightbox__top
         = link_to "トップ", root_path, class: 'top'
