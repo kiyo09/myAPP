@@ -16,23 +16,27 @@
 
 .report-p{
   width: 50%;
-  margin-top: 30px;
   .todos{
     width: 100%;
+    padding: 10px;
     .right-box{
       .input-box{
         width: 100%;
         .day-today{
           @include DQcolor;
+          padding: 10px;
         }
         .right-box__day{
           @include DQcolor;
+          padding: 10px;
         }
         .report_Feedback{
           @include DQcolor;
+          padding: 10px;
         }
         .report_business{
           @include DQcolor;
+          padding: 10px;
         }
       }
     }
@@ -53,25 +57,44 @@
   width: 100%;
   .day-p-today{
     @include DQcolor;
+    padding: 10px;
     }
   }
 .reports-p{
-  width: 50%;
-  .report-p{
+  align-items: center;
+  padding: 10px 10px 10px 40px;
+  .report-p1{
+    width: 90%;
     display: flex;
     flex-direction: column;
     &_text{
+      padding: 10px;
       @include DQcolor;
     }
     &_Feedback{
+      padding: 10px;
+      font-size: 20px;
       @include DQcolor;
-  }
-
+    }
     &_business{
       @include DQcolor;
+      padding: 10px;
     }
     &_tomorrow{
       @include DQcolor;
+      padding: 10px;
+    }
+  }
+}
+.form-p{
+  width: 50%;
+  margin: 20px 40px 0 0;
+  .input-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .input-text{
+      font-size: 30px;
     }
   }
 }

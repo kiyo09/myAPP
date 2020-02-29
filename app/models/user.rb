@@ -29,7 +29,7 @@ class User < ApplicationRecord
 
     def showyear_last_year
       if (last_year = years.last).present?
-           last_year.year
+           "#{last_year.year}年目標"
       else
         '年が指定されていません。'
       end
@@ -49,9 +49,9 @@ class User < ApplicationRecord
 
     def showmonth_last_month
       if (last_month = months.last).present?
-           last_month.month
+           "#{last_month.month}月目標"
         else
-          'まだ月間目標はありません。'
+          '月が指定されていません。'
         end
     end
 
@@ -69,7 +69,7 @@ class User < ApplicationRecord
 
     def showweek_last_week
       if (last_week = weeks.last).present?
-           last_week.week
+           "#{last_week.week}週目標"
         else
           '週が指定されていません。'
         end
@@ -80,10 +80,10 @@ class User < ApplicationRecord
         if last_post.text?
            last_post.text
         else
-          'まだメッセージはありません。'
+          'まだ振り返りはありません。'
         end
       else
-        'まだメッセージはありません。'
+        'まだ振り返りはありません。'
       end
     end
 
@@ -91,8 +91,26 @@ class User < ApplicationRecord
       if (last_post = posts.last).present?
            last_post.updated_at.strftime("%m月%d日")
         else
-          '週が指定されていません。'
+          '日が指定されていません。'
         end
+    end
+
+    def show_last_todo
+      if (last_todo = todos.last).present?
+        if last_todo.todo1?
+           last_todo.todo1
+        else
+          'まだTODOはありません。'
+        end
+      else
+         'まだTODOはありません。'
+      end
+    end
+
+    def showtodo_last_todo
+      if (last_todo = todos.last).present?
+           last_todo.updated_at.strftime("%m月%d日")
+      end
     end
 
     def show_last_memo
@@ -103,7 +121,7 @@ class User < ApplicationRecord
           last_memo.text
         end
       else
-        'まだメッセージはありません。'
+        'TODOリストがありません。'
       end
     end
 

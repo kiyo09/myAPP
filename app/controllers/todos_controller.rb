@@ -16,7 +16,8 @@ class TodosController < ApplicationController
   
   def show
     @todo = Todo.find(params[:id])
-    if @todo.posts.present?
+    @posts = Post.where(" id = ? ", "#{@todo.id}").order("created_at DESC")
+    if @posts.present?
       @post = Post.find(params[:id])
     else
       @post = Post.new

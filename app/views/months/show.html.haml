@@ -9,7 +9,7 @@
           .month_text
             = @month.text
           .month_target
-            = @month.target
+            = "#{@month.target}週間でやる"
           .month_goal
             = @month.goal
           .month_checkbox
@@ -17,15 +17,11 @@
         .month_Feedback
           = @month.Feedback
 
-      .report
+      .m-report
         - @weeks.each do |week|
-          .repo
-            = link_to "週", week_path(@week), class: 'repo'
-            %br
-            = link_to "#{week.week}", week_path(@week), class: 'repo'
-            %br
-            = link_to "TITLE", week_path(@week), class: 'repo'
-            = link_to "#{week.text}", week_path(@week), class: 'repo'
-            %br
-            = link_to "FEEDBACK", week_path(@week), class: 'repo'
-            = link_to "#{week.Feedback}", week_path(@week), class: 'repo'
+          .m-report-list
+            = link_to "#{week.week}週目", week_path(week.id), class: 'm-repo'
+            = link_to "#{week.text}", week_path(week.id), class: 'm-repo'
+            -# %br
+            -# = link_to "振り返り", week_path(@week), class: 'm-repo'
+            -# = link_to "#{week.Feedback}", week_path(@week), class: 'm-repo'

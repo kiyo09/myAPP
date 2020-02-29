@@ -8,9 +8,5 @@
           .input-box
             = f.text_field :month, class: 'input-text', placeholder: "何月？"
             = f.text_field :week, class: 'input-text', placeholder: "何週間目？"
-            = f.text_area :text, class: 'input-text',rows: "3", wrap: "hard", placeholder: "一週間の目標"
+            = f.text_area :text, class: 'input-text',rows: "3", wrap: "soft", placeholder: "一週間の目標"
           = f.submit "報告する", class: 'submit-btn'
-
-        .week_num
-        .week_text
-        .week_checkbox

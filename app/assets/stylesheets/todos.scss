@@ -32,6 +32,8 @@ body{
   }
 
 .contents-t{
+  width: 100%;
+  padding-top: 15px;
   .reports-t{
     
     .report-t{
@@ -39,11 +41,12 @@ body{
       flex-wrap: wrap;
       width: 100%;
       .repo{
-        width: 50%;
+        width: calc(100% / 3);
         .rep{
           @include DQcolor;
           display: flex;
           flex-direction: column;
+          padding: 10px;
         }
       }
     }
@@ -51,8 +54,8 @@ body{
 }
 .repo-d{
   margin: 3px;
-  font-size: 30px;
+  font-size: 20px;
 }
 .repo-d2{
-  font-size: 30px;
+  font-size: 20px;
 }

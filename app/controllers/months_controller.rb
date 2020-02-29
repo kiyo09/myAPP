@@ -1,6 +1,6 @@
 class MonthsController < ApplicationController
   def index
-    @months = Month.all
+    @months = Month.includes(:user).order("created_at DESC")
   end
   
   def new
@@ -14,8 +14,10 @@ class MonthsController < ApplicationController
   
   def show
     @month = Month.find(params[:id])
-    @weeks = Week.where("month = ? ", "#{@month.month}")
-    @week = Week.find(params[:id])
+    @weeks = Week.where("month = ? ", "#{@month.month}").order("created_at DESC")
+    # if @weeks.ids.present?
+    # @week = Week.find(params[:id])
+    # end
   end
 
   def edit

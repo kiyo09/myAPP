@@ -3,14 +3,14 @@
 
   .contents
     .content
-      = link_to "目標を立てる", new_month_path, class: 'month'
-      .month
+      = link_to "目標を立てる", new_month_path, class: 'month-a'
+      .months
         - @months.each do |month|
           .month-box
             .month-box_num
-              = link_to "#{month.month}月", edit_month_path(month), class: 'months'
-              .month-box_text
-                = month.text
+              = link_to "#{month.month}月の目標", edit_month_path(month), class: 'months'
+            .month-box_text
+              = month.text
               .month-box_check_box
                 = check_box :month, :checkbox, {class: 'check_box'}, true, false
           

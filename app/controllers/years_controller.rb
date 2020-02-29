@@ -14,8 +14,10 @@ class YearsController < ApplicationController
   
   def show
     @year = Year.find(params[:id])
-    @months = Month.where("year = ? ", "#{@year.year}")
-    @month = Month.find(params[:id])
+    @months = Month.where("year = ? ", "#{@year.year}").order("created_at DESC")
+    # if @months.ids.present?
+    # @month = Month.find(id:params[:id])
+    # end
   end
 
   def edit

@@ -14,8 +14,10 @@ class WeeksController < ApplicationController
   
   def show
     @week = Week.find(params[:id])
-    @posts = Post.where(" week = ? ", "#{@week.week}")
-    @post = Post.find(params[:id])
+    @posts = Post.where(" week = ? ", "#{@week.week}").order("created_at DESC")
+    # if @posts.ids.present?
+    # @post = Post.find(params[:id])
+    # end
   end
 
   def edit

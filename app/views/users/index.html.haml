@@ -5,32 +5,30 @@
     .year
       .year-today
         = link_to "#{current_user.showyear_last_year}" , years_path, class: 'yearTitle'
-        年目標
       .year-title
         = current_user.show_last_year
     .month
       .month-today
         = link_to "#{current_user.showmonth_last_month}" , months_path, class: 'monthTitle'
-        月目標
       .month-title
         = current_user.show_last_month
     .week
       .week-today
         = link_to "#{current_user.showweek_last_week}" , weeks_path, class: 'weekTitle'
-        週目標
       .week-title
         = current_user.show_last_week
     .day
       .post-today
         = link_to "#{current_user.showpost_last_post}" , todos_path, class: 'dayTitle'
-        直近の振り返り
       .post-title
         TITLE
+        %dr
         = current_user.show_last_post
-        
- 
-    .todo
-      = link_to new_todo_path do
-        TODO
-
+    .todot
+      .todot-today
+        = link_to "#{current_user.showtodo_last_todo}" , todos_path, class: 'dayTodo'
+      .todot-title
+        TITLE
+        %br
+        = current_user.show_last_todo
   
