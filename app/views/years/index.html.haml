@@ -3,12 +3,13 @@
 
   .contents
     .content
-      = link_to "目標を立てる", new_year_path, class: 'year'
-      = link_to "マンダラシート", new_mandara_path, class: 'year'
-      .year
-        - @years.each do |year|
-          .year-box
-            .year-box_num
-              = link_to "#{year.year}年", edit_year_path(year), class: 'years'
-              .year-box_title
-                = year.title
+      = link_to "目標を立てる", new_year_path, class: 'y'
+    .content
+      = link_to "マンダラシート作成", new_mandara_path, class: 'y'
+    .year-y
+      - @years.each do |year|
+        .year-y-box
+          .year-y-box_num
+            = link_to "#{year.year}年", edit_year_path(year), class: 'year-y'
+            .year-y-box_title
+              = year.title

@@ -4,13 +4,23 @@
   .contents
     .reports
       .report
+        - @posts.each do |todo|
+          .repo
+            = link_to "日付", todo_path(todo.id), class: 'repo'
+            %br
+            = link_to "#{todo.updated_at.strftime("%m月%d日")}", todo_path(todo.id), class: 'repo'
+            %br
+            = link_to "今日もっともやるべき１つ", todo_path(todo.id), class: 'repo'
+            -# = link_to "#{todo.todo1}", todo_path(todo.id), class: 'repo'
+            %br 
         - @posts.each do |post|
           .repo
-            = link_to "日付", post_path(post), class: 'repo'
+            = link_to "日付", root_path, class: 'repo'
             %br
-            = link_to "#{post.created_at}", post_path(post), class: 'repo'
+            = link_to "#{post.updated_at.strftime("%m月%d日")}", root_path, class: 'repo'
             %br
-            = link_to "TITLE", post_path(post), class: 'repo'
-            = link_to "#{post.text}", post_path(post), class: 'repo'
-            %br 
+            = link_to "TITLE", root_path, class: 'repo'
+            = link_to "#{post.text}", root_path, class: 'repo'
+            %br
+
        

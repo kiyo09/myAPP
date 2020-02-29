@@ -1,3 +1,49 @@
 // Place all the styles related to the months controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'modules/_DR.scss';
+
+.content{
+  padding: 10px;
+  .month{
+    padding: 10px;
+}
+  .months{
+    margin: 0 20px 0 20px;
+    padding: 10px;
+    .month-box{
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      @include DQcolor;
+      &_num{
+
+      }
+
+    }
+  }
+}
+.month-box_text{
+  margin: auto;
+}
+
+.m-report{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 20px;
+  align-items: center;
+  &-list{
+    @include DQcolor;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 95%;
+  }
+}
+
+.month-a{
+  @include DQcolor;
+  font-size: 20px;
+  padding: 20px;
+}

@@ -1,3 +1,5 @@
 class Month < ApplicationRecord
-  has_many :weeks
+  belongs_to :user
+  # has_many :weeks
+  # belongs_to :year
 end

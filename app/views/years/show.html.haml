@@ -3,26 +3,36 @@
 
   .contents
     .content
-      .year
-        .year_num
+      .year-s
+        .year-s_num
           = link_to "#{@year.year}年の目標", edit_year_path(@year), class: 'years'
         %br
-        .year_title
-          目標
+        .year-s_title
           %br
           = @year.title
         %br
-        .year_kgi
+        .year-s_kgi
           KGI
           %br
           = @year.kgi
         %br
-        .year_kpi
+        .year-s_kpi
           KPI
           %br
           = @year.kpi
         %br
-        .year_kdi
+        .year-s_kdi
           KDI
           %br
           = @year.kdi
+
+      .y-report
+        - @months.each do |month|
+          .repo
+            = link_to "#{month.month}月", month_path(month.id), class: 'repo-y'
+            %br
+            = link_to "TITLE",  month_path(month.id), class: 'repo-y'
+            = link_to "#{month.text}",  month_path(month.id), class: 'repo-y'
+            %br
+            = link_to "FEEDBACK",  month_path(month.id), class: 'repo-y'
+            = link_to "#{month.Feedback}",  month_path(month.id), class: 'repo-y'

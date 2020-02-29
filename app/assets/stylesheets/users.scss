@@ -1,3 +1,68 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'modules/_DR.scss';
+
+.contents{
+  .year{
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    &-today{
+      
+    }
+    &-title{
+
+    }
+  }
+  .month{
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    &-today{
+      
+    }
+    &-title{
+
+    }
+  }
+  .week{
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    &-today{
+      
+    }
+    &-title{
+
+    }
+  }
+  .day{
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    &-today{
+      
+    }
+    &-title{
+
+    }
+  }
+  .todot{
+    @include DQcolor;
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    &-today{
+      
+    }
+    &-title{
+ 
+  }
+}
+}

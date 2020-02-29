@@ -1,0 +1,61 @@
+// Place all the styles related to the todos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'modules/_DR.scss';
+body{
+  background-image: url(http://yms.main.jp/sozai1/tile_inside_f1/sample_insidef1/ger4.png);
+
+}
+
+.report{
+  width: 80%;
+  margin-top: 30px;
+  .todo-n{
+    width: 100%;
+    .right-box__day{
+      display: flex;
+      flex-direction: column;
+      .input-text1{
+        font-size: 50px;
+      }
+      .input-text3{
+        font-size: 40px;
+      }
+      .input-text5{
+        font-size: 30px;
+      }
+    }
+  .submit-btn{
+    width: 100%;
+  }
+    }
+  }
+
+.contents-t{
+  width: 100%;
+  padding-top: 15px;
+  .reports-t{
+    
+    .report-t{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      .repo{
+        width: calc(100% / 3);
+        .rep{
+          @include DQcolor;
+          display: flex;
+          flex-direction: column;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+.repo-d{
+  margin: 3px;
+  font-size: 20px;
+}
+.repo-d2{
+  font-size: 20px;
+}

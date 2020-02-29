@@ -1,24 +1,79 @@
 // Place all the styles related to the years controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.contents{
-  .content{
-    .year{
-        flex-direction: column;
-        .year-box{
-          .year-box_num{
-            display: flex;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            .year-box_text{
-
-            }
-            .year-box_checkbox{
-            }
-          }
-        }
+@import 'modules/_DR.scss';
+.year-y{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin: 0 20px 0 20px;
+  padding: 20px;
+  .year-y-box{
+    @include DQcolor;
+    .year-y-box_num{
+      font-size: 25px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .year-y-box_title{
+        padding-bottom: 20px;
+        font-size: 30px;
+        margin: auto;
+      }
       }
     }
   }
+  .y{
+    @include DQcolor;
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .year-e{
+    @include DQcolor;
+    padding: 10px;
+    font-size: 20px;
+  }
+.year-s{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin: 0 20px 0 20px;
+  padding: 20px;
+  @include DQcolor;
+  .year-s_num{
+    font-size: 25px;
+  }
+  .year-s_title{
+    margin: auto;
+    font-size: 30px;
+  }
+  .year-s_kgi{
+    
+  }
+  .year-s_kpi{
+    
+  }
+  .year-s_kdi{
+    
+  }
+}
+
+.y-report{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  align-items: center;
+  .repo{
+    @include DQcolor;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 90%;
+  }
+}
+
+.repo{
+
+}

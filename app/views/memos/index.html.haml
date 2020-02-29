@@ -1,0 +1,14 @@
+.wrapper  
+  = render "layouts/sidebar"
+
+  .contents-m
+    .content-m
+      = link_to "memo", new_memo_path, class: 'memo-a'
+    .memos
+      - @memos.each do |memo|
+        .memos-box
+          .memos-box_num
+            = link_to "#{memo.title}", memo_path(memo), class: 'memo'
+          .memos-box_text
+            = link_to "#{memo.text}", memo_path(memo), class: 'memo'
+            = memo.updated_at.strftime("%m月%d日")

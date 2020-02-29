@@ -3,12 +3,22 @@
 
   .contents
     .content
-      .week
-        .week_num
+      .weeks
+        .weeks_num
           = "#{@week.week}wの目標"
-        .week_text
+        .weeks_text
           = @week.text
-        .week_Feedback
+        .weeks_Feed
+          振り返り
+        .weeks_Feedback
           = @week.Feedback
-        .week_checkbox
+        .weeks_checkbox
           = check_box :week, :checkbox, {class: 'check_box'}, true, false
+
+      .w-post
+        - @posts.each do |post|
+          .w-post_content
+            = link_to "#{post.updated_at.strftime("%m月%d日")}", todo_path(post.id), class: 'repo-w'
+            %br
+            = link_to "#{post.text}", todo_path(post.id), class: 'repo-w'
+            %br

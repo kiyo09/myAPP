@@ -1,0 +1,62 @@
+.wrapper  
+  = render "layouts/sidebar" 
+
+  .report-p
+    .todos
+      .right-box
+        = form_with model: @todo, local: true do |f|
+          .input-box
+            .day-today
+              = @todo.updated_at.strftime("%m月%d日")
+            .right-box__day
+              今日もっともやるべき１つ
+              %br 
+              = @todo.todo1
+              = f.check_box :checkbox1, class: 'input-text'
+            .report_Feedback
+              今日やるべき大きなこと３つ
+              %br
+              = @todo.todo3
+              = f.check_box :checkbox3, class: 'input-text'
+            .report_business
+              今日やるべきこと５つ
+              %br
+              = @todo.todo5
+              = f.check_box :checkbox5, class: 'input-text'        
+            = f.submit "報告する", class: 'submit-btn-todo'
+
+  - if @posts.present?
+    .day-p
+      .day-p-today
+        日付
+        %br
+        = "#{@post.week}週間目"
+        = @post.updated_at.strftime("%m月%d日")
+      .reports-p
+        .report-p1
+          .report-p1_text
+            今日の積み上げ
+            %br 
+            = @post.text
+          .report-p1_Feedback
+            振り返り 
+            %br
+            = @post.Feedback
+          .report-p1_business
+            ビジネスに活かせそうなこと
+            %br
+            = @post.business
+          .report-p1_tomorrow
+            反省、明日に活かすこと
+            %br
+            = @post.tomorrow
+  - else
+    .form-p
+      = form_for [@todo,@post] do |f|
+        .input-box
+          = f.text_field :week, class: 'input-text', placeholder: "何週間目？"
+          = f.text_area :text, class: 'input-text',rows: "5", wrap: "soft", placeholder: "今日の積み上げ"
+          = f.text_area :Feedback, class: 'input-text',rows: "5", wrap: "soft", placeholder: "振り返り"
+          = f.text_area :business, class: 'input-text',rows: "5", wrap: "soft", placeholder: "ビジネスに活かせそうなこと"
+          = f.text_area :tomorrow, class: 'input-text',rows: "5", wrap: "soft", placeholder: "反省、明日に活かすこと"
+        = f.submit "報告する", class: 'submit-btn'

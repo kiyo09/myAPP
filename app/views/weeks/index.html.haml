@@ -3,12 +3,13 @@
 
   .contents
     .content
-      = link_to "目標を立てる", new_week_path, class: 'week'
-      .week
+      = link_to "目標を立てる", new_week_path, class: 'week-a'
+      .weeks-w
         - @weeks.each do |week|
-          .week-box
-            .week-box_num
-              = link_to "#{week.week}w", edit_week_path(week), class: 'weeks'
+          .week-boxs
+            .week-box
+              .week-box_num
+                = link_to "#{week.week}w", edit_week_path(week), class: 'weeks-a'
               .week-box_text
                 = week.text
               .week-box_check_box

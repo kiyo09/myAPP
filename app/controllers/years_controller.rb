@@ -1,6 +1,6 @@
 class YearsController < ApplicationController
   def index
-    @years = Year.all
+    @years = Year.includes(:user).order("created_at DESC")
   end
   
   def new
@@ -14,7 +14,10 @@ class YearsController < ApplicationController
   
   def show
     @year = Year.find(params[:id])
-  
+    @months = Month.where("year = ? ", "#{@year.year}").order("created_at DESC")
+    # if @months.ids.present?
+    # @month = Month.find(id:params[:id])
+    # end
   end
 
   def edit
@@ -30,6 +33,6 @@ class YearsController < ApplicationController
   
   private
   def year_params
-    params.require(:year).permit(:year,:title,:kgi,:kpi,:kdi)
+    params.require(:year).permit(:year,:title,:kgi,:kpi,:kdi).merge(user_id: current_user.id)
   end
 end

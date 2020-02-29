@@ -1,25 +1,29 @@
 // Place all the styles related to the weeks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+@import 'modules/_DR.scss';
 .contents{
+  margin: 10px;
   .content{
+    padding: 5px 0 5px 10px;
     .week{
-        flex-direction: column;
-        .week-box{
-          .week-box_num{
-            display: flex;
-            width: 100%;
-            .week-box_text{
+      font-size: 20px;
 
-            }
-            .week-box_checkbox{
-            }
-          }
         }
       }
+    .weeks{
+      display: flex;
+      flex-direction: column;
+      @include DQcolor;
+      padding: 10px;
+      &_text{
+        padding: 10px;
+      }
+      &_Feedback{
+        padding: 10px;
+      }
     }
-  }
+    }
 
   .check_box{
     width:			24px;
@@ -28,3 +32,57 @@
 	-webkit-transform:	scale(1.4);
 	transform:		scale(1.4);
   }
+
+  .w-post{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 40px 20px 60px;
+    align-items: center;
+    &_content{
+      padding: 10px;
+      @include DQcolor;
+      display: inline-block;
+      font-size: 20px;
+      width: 30%;
+    }
+  }
+  .week-a{
+    @include DQcolor;
+    font-size: 20px;
+    padding: 20px;
+  }
+  .weeks-a{
+    display: flex;
+    flex-direction: column;
+    // @include DQcolor;
+    padding: 10px;
+  }
+  .week-e{
+    @include DQcolor;
+    padding: 10px;
+  }
+  .weeks-w{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 10px 20px 0px 0px;
+    padding: 10px;
+    .week-boxs{
+      width: 50%;
+    .week-box{
+      @include DQcolor;
+      padding: 10px;
+      .week-box_num{
+      }
+      .week-box_text{
+        font-size: 20px;
+        padding: 10px;
+        margin: auto;
+      }
+      .week-box_checkbox{
+        margin: auto;
+      }
+    }
+  }
+}

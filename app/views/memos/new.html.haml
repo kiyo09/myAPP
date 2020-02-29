@@ -1,0 +1,13 @@
+.wrapper  
+  = render "layouts/sidebar"
+
+  .contents
+    .content
+      .form-m
+        = form_for [@memo] do |f|
+          .input-box
+            = f.text_area :title, class: 'input-text',rows: "3", wrap: "soft", placeholder: "title"
+            = f.text_area :text, id: "foo", class: 'input-text',rows: "20", wrap: "soft", placeholder: "text"
+            %button.btn{"data-clipboard-target"=> "#foo"}クリップボード
+          = f.submit "報告する", class: 'submit-btn'
+          

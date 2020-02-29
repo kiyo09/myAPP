@@ -1,0 +1,18 @@
+.wrapper  
+  = render "layouts/sidebar"
+
+  .contents
+    .reports
+      .report
+        - @todos.each do |todo|
+          .repo
+            = link_to "日付", user_todo_path(current_user,todo.id), class: 'repo'
+            %br
+            = link_to "#{todo.updated_at.strftime("%m月%d日")}", user_todo_path(current_user,todo.id), class: 'repo'
+            %br
+            = link_to "今日もっともやるべき１つ", user_todo_path(current_user,todo.id), class: 'repo'
+            = link_to "#{todo.todo1}", user_todo_path(current_user,todo.id), class: 'repo'
+            %br 
+            今日の積み上げ
+            %br 
+            = todo.posts.text

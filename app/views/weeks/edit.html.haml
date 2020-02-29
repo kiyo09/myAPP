@@ -3,15 +3,15 @@
 
   .contents
     .content
-      .week
-        = @week.week
+      .week-e
+        = "#{@week.week}wの目標"
       .form
         = form_for [@week] do |f|
           .input-box
             = f.text_field :week, class: 'input-text', placeholder: "何週間目？"
-            = f.text_area :text, class: 'input-text',rows: "3", wrap: "hard", placeholder: "一週間の目標"
-            = f.text_area :Feedback, class: 'input-text',rows: "3", wrap: "hard", placeholder: "一週間の目標"
-            = f.check_box :week, class: 'input-text', placeholder: "一週間の目標"        
+            = f.text_area :text, class: 'input-text',rows: "2", wrap: "soft", placeholder: "一週間の目標"
+            = f.text_area :Feedback, class: 'input-text',rows: "5", wrap: "soft", placeholder: "振り返り"
+            = f.check_box :checkbox, class: 'input-text', placeholder: "一週間の目標"        
           = f.submit "報告する", class: 'submit-btn'
 
         .week_num

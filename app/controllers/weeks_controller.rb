@@ -1,6 +1,6 @@
 class WeeksController < ApplicationController
   def index
-    @weeks = Week.all
+    @weeks = current_user.weeks.order("created_at DESC")
   end
   
   def new
@@ -14,7 +14,10 @@ class WeeksController < ApplicationController
   
   def show
     @week = Week.find(params[:id])
-  
+    @posts = Post.where(" week = ? ", "#{@week.week}").order("created_at DESC")
+    # if @posts.ids.present?
+    # @post = Post.find(params[:id])
+    # end
   end
 
   def edit
@@ -22,13 +25,13 @@ class WeeksController < ApplicationController
   end
 
   def update
-    week = Week.find(params[:id])
-    week.update(week_params)
-    redirect_to week_path(week), notice: "今週も頑張ろう！！"
+    @week = Week.find(params[:id])
+    @week.update(week_params)
+    redirect_to week_path(@week), notice: "今週も頑張ろう！！"
   end
   
   private
   def week_params
-    params.require(:week).permit(:text,:Feedback,:week,:checkbox)
+    params.require(:week).permit(:text,:Feedback,:week,:checkbox,:month).merge(user_id: current_user.id)
   end
 end

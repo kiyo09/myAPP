@@ -1,0 +1,14 @@
+.wrapper  
+  = render "layouts/sidebar" 
+
+  .report
+    .todo-n
+      .right-box
+        = form_for [@todo] do |f|
+          .right-box__day
+            = f.text_area :todo1, class: 'input-text1',rows: "1", wrap: "soft", placeholder: "今日もっともやるべき１つ"
+            = f.text_area :todo3, class: 'input-text3',rows: "3", wrap: "soft", placeholder: "今日やるべき大きなこと３つ"
+            = f.text_area :todo5, class: 'input-text5',rows: "5", wrap: "soft", placeholder: "今日やるべきこと５つ"
+          = f.submit "報告する", class: 'submit-btn'
+    
+    

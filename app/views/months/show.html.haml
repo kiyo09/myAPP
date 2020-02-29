@@ -9,10 +9,19 @@
           .month_text
             = @month.text
           .month_target
-            = @month.target
+            = "#{@month.target}週間でやる"
           .month_goal
             = @month.goal
           .month_checkbox
             = check_box :month, :checkbox, {class: 'check_box'}, true, false
         .month_Feedback
           = @month.Feedback
+
+      .m-report
+        - @weeks.each do |week|
+          .m-report-list
+            = link_to "#{week.week}週目", week_path(week.id), class: 'm-repo'
+            = link_to "#{week.text}", week_path(week.id), class: 'm-repo'
+            -# %br
+            -# = link_to "振り返り", week_path(@week), class: 'm-repo'
+            -# = link_to "#{week.Feedback}", week_path(@week), class: 'm-repo'

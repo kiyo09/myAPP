@@ -1,0 +1,11 @@
+.wrapper  
+  = render "layouts/sidebar"
+
+  .contents-m
+    .content-m
+      .memos
+        = @memo.title
+        = @memo.updated_at.strftime("%m月%d日")
+        .month_text#foo
+          = @memo.text
+      

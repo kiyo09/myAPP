@@ -7,12 +7,23 @@
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"}
+    %script{:src => "https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"}
+    :javascript
+      $(function() {
+        var clipboard = new Clipboard('.btn');
+        });
+
   %body
   .header
     .header-title
     .header-lightbox
+      .header-lightbox__top
+        = link_to "トップ", root_path, class: 'top'
+      .header-lightbox__man
+        = link_to "マンダラ", mandara_path(1), class: 'top'
       .header-lightbox__new
-        = link_to "投稿する", new_post_path, class: 'new'
+        = link_to "投稿する", new_todo_path, class: 'new'
       .header-lightbox__login
         = link_to "ログイン", user_session_path, class: 'login'
       .header-lightbox__logout

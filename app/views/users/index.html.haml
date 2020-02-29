@@ -4,26 +4,31 @@
   .contents
     .year
       .year-today
-        年間目標　2020年
-        .year-title
-          フリーになる
+        = link_to "#{current_user.showyear_last_year}" , years_path, class: 'yearTitle'
+      .year-title
+        = current_user.show_last_year
     .month
       .month-today
-        月間目標　3月
-        .month-title
-          タイピング秒速５
+        = link_to "#{current_user.showmonth_last_month}" , months_path, class: 'monthTitle'
+      .month-title
+        = current_user.show_last_month
     .week
       .week-today
-        週間目標　10w
-        .week-title
-          毎日英語勉強
+        = link_to "#{current_user.showweek_last_week}" , weeks_path, class: 'weekTitle'
+      .week-title
+        = current_user.show_last_week
     .day
-      .day-today
-        3月1日
-        -# .report
-        -#   - @posts.each do |post|
-        -#     = post.text
-        .todo
-          = link_to new_post_path do
-            TODO
+      .post-today
+        = link_to "#{current_user.showpost_last_post}" , todos_path, class: 'dayTitle'
+      .post-title
+        TITLE
+        %dr
+        = current_user.show_last_post
+    .todot
+      .todot-today
+        = link_to "#{current_user.showtodo_last_todo}" , todos_path, class: 'dayTodo'
+      .todot-title
+        TITLE
+        %br
+        = current_user.show_last_todo
   
