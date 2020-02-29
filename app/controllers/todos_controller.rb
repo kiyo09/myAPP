@@ -21,6 +21,8 @@ class TodosController < ApplicationController
       @post = Post.find(params[:id])
     else
       @post = Post.new
+      @post.user_id = current_user
+      @post.levels.build
     end
   end
 
