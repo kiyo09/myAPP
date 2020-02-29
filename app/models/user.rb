@@ -11,7 +11,8 @@ class User < ApplicationRecord
     has_many :weeks
     has_many :years
     has_many :todos
-
+    has_many :levels
+    
     validates :name, presence: true
     
 

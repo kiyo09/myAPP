@@ -22,9 +22,10 @@ def show
   @user = current_user
 end
 
+
+
 private
 def post_params
   params.require(:post).permit(:text,:Feedback,:business,:tomorrow,:week).merge(user_id: current_user.id, todo_id: params[:todo_id])
 end
-
 end
