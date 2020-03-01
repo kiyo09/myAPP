@@ -2,7 +2,7 @@
 ===================================*/
 /** RESET AND LAYOUT
 ===================================*/
-.box-wrapper{
+.box-wrapper {
   z-index: 100;
   position: absolute;
   top: 200px;
@@ -10,13 +10,8 @@
   right: 0;
   bottom: 0;
 }
-#modal-gif{
-}
-.bxslider{
 
-}
-
-.box-wrapper2{
+.box-wrapper2 {
   z-index: 100;
   position: absolute;
   top: 200px;
@@ -24,3 +19,4 @@
   right: 0;
   bottom: 0;
 }
+/*# sourceMappingURL=jquery.bxslider.css.map */

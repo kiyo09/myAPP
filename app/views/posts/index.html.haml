@@ -1,0 +1,32 @@
+%p
+  jQueryy
+
+-# $(function() {
+-# 	// getJSON の利用
+-# 	var url = "http://ja.wikipedia.org/w/api.php?format=json&action=query&list=random&rnnamespace=0&rnlimit=10&callback=?";
+-# 	$.getJSON(url, function(data) {
+-# 		console.log(url + " を読み込みました。");
+-# 		console.log(data);
+-# 		for (var i = 0; i < data.query.random.length; i ++) {
+-# 			var obj = data.query.random[i];
+-# 			var link = 'https://ja.wikipedia.org/wiki/'
+-# 				+ encodeURIComponent(obj.title);
+-# 			console.log(i, obj.title, obj.id, link);
+-# 		}
+-# 	});
+-# });
+
+-# $(function() {
+-#       var url = "https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fb.hatena.ne.jp%2Fentrylist%3Fsort%3Dhot%26threshold%3D%26mode%3Drss";
+-#       $.getJSON(url, function(data) {
+-#         console.log(url + " を読み込みました。");
+-#         console.log(data);
+-#         for (var i = 0; i < data.items.length; i ++) {
+-#           var obj = data.items[i];
+-#           console.log(i, obj.title, obj.link);
+-#         }
+-#       });
+-#     });
+
+:javascript
+  
