@@ -10,6 +10,9 @@ body{
 .report{
   width: 80%;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .todo-n{
     width: 100%;
     .right-box__day{
@@ -58,4 +61,10 @@ body{
 }
 .repo-d2{
   font-size: 20px;
+}
+
+.image1{
+  background-image: image-url('todo.gif');
+  width: 33%;
+  height: 22vh;
 }

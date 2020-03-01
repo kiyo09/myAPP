@@ -6,14 +6,23 @@
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"}
     %script{:src => "https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"}
+    %link{:href => "https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css", :rel => "stylesheet"}/
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"}
+    %script{:src => "https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"}
+
+
     :javascript
       $(function() {
         var clipboard = new Clipboard('.btn');
         });
-
+      $(function(){
+        $('.bxslider').bxSlider({
+          auto: true,
+          slideWidth: 640,
+        });
+        })
   %body
   .header
     .header-title
@@ -28,7 +37,7 @@
               = "1レベル"
     .header-lightbox
       .header-lightbox__top
-        = link_to "トップ", root_path, class: 'top'
+        = link_to "トップ", root_path, class: 'top', id: 'modal'
       .header-lightbox__man
         = link_to "マンダラ", mandara_path(1), class: 'top'
       .header-lightbox__new
@@ -37,5 +46,14 @@
         = link_to "ログイン", user_session_path, class: 'login'
       .header-lightbox__logout
         = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'logout'
-  
+
+  :javascript
+    $(function(){
+      $("#modal-gif").css("display", "none");
+      $("#modal-up").click(function(){
+        $("#modal-gif").toggle();
+        });
+    });
+
   = yield
+  

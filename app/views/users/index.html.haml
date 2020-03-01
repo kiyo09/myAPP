@@ -1,6 +1,5 @@
 .wrapper
   = render "layouts/sidebar"
-  
   .contents
     .year
       .year-today
@@ -32,3 +31,17 @@
         %br
         = current_user.show_last_todo
   
+    .manual
+      %button#modal-up
+        manual
+
+.box-wrapper#modal-gif
+  %ul.bxslider
+    %li
+      %img{:alt => "", :height => "300", :src => "assets/image003.jpg", :width => "640"}/
+    %li
+      %img{:alt => "", :height => "300", :src => "assets/image002.jpg", :width => "640"}/
+    %li
+      %img{:alt => "", :height => "300", :src => "assets/image001.jpg", :width => "640"}/
+    %li
+      %img{:alt => "", :height => "300", :src => "assets/image001.jpg", :width => "640"}/
