@@ -51,12 +51,14 @@
     @include DQcolor;
     font-size: 20px;
     padding: 20px;
+    height: 60px;
   }
   .weeks-a{
     display: flex;
     flex-direction: column;
     // @include DQcolor;
     padding: 10px;
+    height: 60px;
   }
   .week-e{
     @include DQcolor;

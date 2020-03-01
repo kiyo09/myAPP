@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_27_140640) do
+ActiveRecord::Schema.define(version: 2020_03_01_130119) do
+
+  create_table "levels", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "todo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["todo_id"], name: "index_levels_on_todo_id"
+    t.index ["user_id"], name: "index_levels_on_user_id"
+  end
 
   create_table "mandaras", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "subtext1"
@@ -114,6 +123,11 @@ ActiveRecord::Schema.define(version: 2020_02_27_140640) do
     t.integer "year"
   end
 
+  create_table "news", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "text"
     t.datetime "created_at", null: false
@@ -173,4 +187,6 @@ ActiveRecord::Schema.define(version: 2020_02_27_140640) do
     t.integer "user_id"
   end
 
+  add_foreign_key "levels", "todos"
+  add_foreign_key "levels", "users"
 end

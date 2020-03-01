@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :years, only: [:index, :new, :create, :show, :edit, :update]
   resources :mandaras, only: [:index, :new, :create, :show, :edit, :update]
   resources :memos, only: [:index, :new, :create, :show]
+  resources :newss, only: [:index, :show]
   
   
 end

@@ -1,0 +1,29 @@
+:javascript
+  $(function() {
+    var url = "https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fb.hatena.ne.jp%2Fentrylist%3Fsort%3Dhot%26threshold%3D%26mode%3Drss";
+    $.getJSON(url, function(data) {
+      console.log(url + " を読み込みました。");
+      console.log(data);
+      var obj =[];
+    for (var i = 0; i < data.items.length; i ++) {
+      obj.push(data.items[i]);
+      console.log(i, obj.title, obj.link);
+          }
+      document.getElementById("news").innerHTML =
+      obj[0].title + obj[0].pubDate + "<a href=" + obj[0].link + ">" + "<br>" + "<br>" +
+      obj[1].title + obj[0].pubDate + "<a href=" + obj[1].link + ">" + "<br>" + "<br>" +
+      obj[2].title + obj[0].pubDate + "<a href=" + obj[2].link + ">" + "<br>" + "<br>" +
+      obj[3].title + obj[0].pubDate + "<a href=" + obj[3].link + ">" + "<br>" + "<br>" +
+      obj[4].title + obj[0].pubDate + "<a href=" + obj[4].link + ">" + "<br>" + "<br>" +
+      obj[5].title + obj[0].pubDate + "<a href=" + obj[5].link + ">" + "<br>" + "<br>" +
+      obj[6].title + obj[0].pubDate + "<a href=" + obj[6].link + ">" + "<br>" + "<br>" +
+      obj[7].title + obj[0].pubDate + "<a href=" + obj[7].link + ">" + "<br>" + "<br>" +
+      obj[8].title + obj[0].pubDate + "<a href=" + obj[8].link + ">" + "<br>" + "<br>" +
+      obj[9].title + obj[0].pubDate + "<a href=" + obj[9].link + ">" + "<br>";
+        });
+      });
+.topic
+  .topic-list
+    最新ニュース
+  #news
+  

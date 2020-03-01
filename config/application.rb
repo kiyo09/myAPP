@@ -18,3 +18,4 @@ module MyAPP
     config.time_zone = 'Tokyo'
   end
 end
+

@@ -1,26 +1,24 @@
-.wrapper  
-  = render "layouts/sidebar"
+%p
+  jq
 
-  .contents
-    .reports
-      .report
-        - @posts.each do |todo|
-          .repo
-            = link_to "日付", todo_path(todo.id), class: 'repo'
-            %br
-            = link_to "#{todo.updated_at.strftime("%m月%d日")}", todo_path(todo.id), class: 'repo'
-            %br
-            = link_to "今日もっともやるべき１つ", todo_path(todo.id), class: 'repo'
-            -# = link_to "#{todo.todo1}", todo_path(todo.id), class: 'repo'
-            %br 
-        - @posts.each do |post|
-          .repo
-            = link_to "日付", root_path, class: 'repo'
-            %br
-            = link_to "#{post.updated_at.strftime("%m月%d日")}", root_path, class: 'repo'
-            %br
-            = link_to "TITLE", root_path, class: 'repo'
-            = link_to "#{post.text}", root_path, class: 'repo'
-            %br
+  -#  function getMyQiita() {
+  -#   const token = "f9478dd7b6a3aa21161729e957312a205ded52fe";
+  -#   const uri = "http://qiita.com/api/v2/authenticated_user/items?page=1&per_page=10";
+  -#   const options = {
+  -#     headers : {
+  -#       'Authorization' : 'Bearer ' + Token
+  -#     },
+  -#     method : 'get'
+  -#   }
+  -#   $.getJSON(url, function(data) {
+  -#   console.log(url + " を読み込みました。");
+  -#   console.log(data);
+  -#   for (var i = 0; i < data.items.length; i ++) {
+  -#   var obj = data.items[i];
+  -#   console.log(i, obj.title, obj.link);
+  -#     }
+  -#       });
+  -#   };
 
-       
+
+
