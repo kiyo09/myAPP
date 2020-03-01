@@ -23,6 +23,12 @@
           slideWidth: 640,
         });
         })
+      $(function(){
+        $('.bxslider2').bxSlider({
+          auto: true,
+          slideWidth: 640,
+        });
+      })
   %body
   .header
     .header-title
@@ -52,6 +58,15 @@
       $("#modal-gif").css("display", "none");
       $("#modal-up").click(function(){
         $("#modal-gif").toggle();
+        $(".wrapper").toggle();
+        });
+    });
+
+    $(function(){
+      $("#modal-gif2").css("display", "none");
+      $("#modal-up2").click(function(){
+        $("#modal-gif2").toggle();
+        $(".wrapper").toggle();
         });
     });
 
