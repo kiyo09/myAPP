@@ -2,13 +2,13 @@
   %br/
   %h3 Qiita投稿一覧取得
   %br/
-  .input-group.flex-nowrap
+  .input-group
     .input-group-prepend
       %span#addon-wrapping.input-group-text Qiita アクセストークンの設定
     %input#accesstoken.form-control{"aria-describedby" => "addon-wrapping", :placeholder => "Access Token", :type => "text"}/
-  %br/
-  %button.btn.btn-primary{:onclick => "getData()", :type => "button"} 読み込み
-  %hr/
+    %br/
+    %button.btn.btn-primary{:onclick => "getData()", :type => "button"} 読み込み
+    %hr/
   #result
 
 :javascript
@@ -37,7 +37,7 @@
       url: "https://qiita.com/api/v2/authenticated_user/items",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer " + "f9478dd7b6a3aa21161729e957312a205ded52fe",
+        "Authorization": "Bearer " + token,
       },
       dataType: "json",
       success: function(data){

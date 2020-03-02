@@ -1,3 +1,3 @@
-$(function(){
-  alert('hellw')
-});
+$function(){
+  $('.top').on.alert('hellow');
+}

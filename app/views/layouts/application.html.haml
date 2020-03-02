@@ -29,6 +29,23 @@
           slideWidth: 640,
         });
       })
+      function getMyQiita() {
+        const token = "f9478dd7b6a3aa21161729e957312a205ded52fe";
+        const url = " http://qiita.com/api/v2/authenticated_user/items?page=1";
+        const options = {
+          headers : {
+            'Authorization' : 'Bearer ' + token
+          },
+          method : 'get'
+          }
+        };
+        const res = getMyQiita();
+        console.log(res)
+
+
+  
+
+
   %body
   .header
     .header-title
